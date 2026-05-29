@@ -55,5 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ── Email Obfuscation ─────────────────────────────────────
+    const user = 'synontech.sa';
+    const domain = 'gmail.com';
+    const email = `${user}@${domain}`;
+    
+    document.querySelectorAll('.contact-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = `mailto:${email}`;
+      });
+    });
+
 
 });

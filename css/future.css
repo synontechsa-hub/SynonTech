@@ -1,92 +1,114 @@
 /* ============================================================
-   synontech — future / on the horizon (High-Fidelity Pass)
+   synontech — future.css
+   Neon Billboard layouts for the upcoming projects page.
    ============================================================ */
 
-#future {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  background: radial-gradient(circle at bottom, rgba(0, 243, 255, 0.02), transparent);
+.billboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 2rem;
+  perspective: 1000px;
 }
 
-.future-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.future-card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-top: 2px solid var(--neon-cyan);
-  padding: 2rem;
+.neon-billboard {
   position: relative;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: rgba(10, 10, 10, 0.8);
+  border: 2px solid var(--primary);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   overflow: hidden;
+  box-shadow: 0 0 20px var(--primary);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 250px;
 }
 
-.future-card::before {
+.neon-billboard:hover {
+  transform: scale(1.02) rotateX(5deg) rotateY(2deg);
+  box-shadow: 0 0 40px var(--primary);
+}
+
+.neon-billboard::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 243, 255, 0.05), transparent);
-  opacity: 0.5;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.05) 2px,
+    rgba(255, 255, 255, 0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
-.future-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--neon-cyan);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 243, 255, 0.1);
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.future-icon {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  filter: grayscale(1) brightness(0.8) drop-shadow(0 0 10px rgba(255,255,255,0.1));
-  transition: all 0.4s;
-  position: relative;
-  z-index: 5;
-}
-
-.future-card:hover .future-icon {
-  filter: grayscale(0) brightness(1.2) drop-shadow(0 0 15px var(--neon-cyan));
-  transform: scale(1.1);
-}
-
-.future-name {
-  font-family: 'Orbitron', monospace;
-  font-size: 1.1rem;
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  position: relative;
-  z-index: 5;
-}
-
-.future-desc {
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  line-height: 1.6;
-  position: relative;
-  z-index: 5;
-}
-
-.future-badge {
-  position: absolute;
-  top: 1rem; right: 1rem;
+.billboard-badge {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--neon-cyan);
-  background: rgba(0, 243, 255, 0.1);
-  border: 1px solid rgba(0, 243, 255, 0.2);
-  padding: 4px 10px;
-  border-radius: 2px;
-  z-index: 10;
+  color: #fff;
+  background: var(--primary);
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  z-index: 2;
+  box-shadow: 0 0 10px var(--primary);
 }
 
-.future-card:nth-child(2n) .future-badge { color: var(--neon-yellow); border-color: rgba(252, 238, 10, 0.2); background: rgba(252, 238, 10, 0.05); }
-.future-card:nth-child(2n) { border-top-color: var(--neon-yellow); }
+.billboard-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 40px var(--primary);
+  z-index: 2;
+  margin-bottom: 1rem;
+  animation: neon-flicker 5s infinite alternate;
+}
+
+.billboard-desc {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 600px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-left: 4px solid var(--primary);
+}
+
+/* Variations */
+.billboard-red {
+  border-color: var(--secondary);
+  box-shadow: 0 0 20px var(--secondary);
+}
+.billboard-red:hover { box-shadow: 0 0 40px var(--secondary); }
+.billboard-red .billboard-badge { background: var(--secondary); box-shadow: 0 0 10px var(--secondary); }
+.billboard-red .billboard-title { text-shadow: 0 0 10px var(--secondary), 0 0 20px var(--secondary), 0 0 40px var(--secondary); }
+.billboard-red .billboard-desc { border-color: var(--secondary); }
+
+.billboard-magenta {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+}
+.billboard-magenta:hover { box-shadow: 0 0 40px var(--accent); }
+.billboard-magenta .billboard-badge { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.billboard-magenta .billboard-title { text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 40px var(--accent); }
+.billboard-magenta .billboard-desc { border-color: var(--accent); }
+
+.billboard-cyan {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px var(--neon-cyan);
+}
+.billboard-cyan:hover { box-shadow: 0 0 40px var(--neon-cyan); }
+.billboard-cyan .billboard-badge { background: var(--neon-cyan); box-shadow: 0 0 10px var(--neon-cyan); }
+.billboard-cyan .billboard-title { text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan); }
+.billboard-cyan .billboard-desc { border-color: var(--neon-cyan); }

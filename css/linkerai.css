@@ -349,7 +349,7 @@
   transition: color 0.2s;
 }
 
-.back-link:hover { color: var(--cyan); }
+.back-link:hover { color: var(--neon-yellow); }
 
 /* ── Linker nav override ── */
 .linker-nav-logo {

@@ -69,7 +69,7 @@
 .card-type {
   font-size: 0.6rem;
   letter-spacing: 0.2em;
-  color: var(--neon-cyan);
+  color: var(--neon-yellow);
   margin-bottom: 1.25rem;
 }
 
@@ -86,8 +86,8 @@
   padding-top: 1.25rem;
 }
 
-/* ── Colour variant glows ── */
-.card--teal:hover { box-shadow: 0 0 30px rgba(0, 255, 204, 0.1); border-color: rgba(0, 255, 204, 0.3); }
+/* Red/Secondary (KerfCut) */
+.card--teal:hover { box-shadow: 0 0 30px rgba(255, 0, 60, 0.1); border-color: rgba(255, 0, 60, 0.3); }
 .card--pink:hover { box-shadow: 0 0 30px rgba(255, 0, 85, 0.1); border-color: rgba(255, 0, 85, 0.3); }
 .card--gold:hover { box-shadow: 0 0 30px rgba(252, 238, 10, 0.1); border-color: rgba(252, 238, 10, 0.3); }
 
@@ -101,7 +101,7 @@
   opacity: 0.5;
 }
 
-.card--teal .card-banner::after { border-color: #00ffcc; box-shadow: inset 0 0 10px rgba(0, 255, 204, 0.2); }
+.card--teal .card-banner::after { border-color: var(--neon-red); box-shadow: inset 0 0 10px rgba(255, 0, 60, 0.2); }
 .card--pink .card-banner::after { border-color: var(--neon-pink); box-shadow: inset 0 0 10px rgba(255, 0, 85, 0.2); }
 .card--gold .card-banner::after { border-color: var(--neon-yellow); box-shadow: inset 0 0 10px rgba(252, 238, 10, 0.2); }
 
@@ -133,10 +133,10 @@
   position: absolute;
   width: 80%;
   height: 60%;
-  border: 2px solid var(--neon-cyan);
+  border: 2px solid var(--neon-yellow);
   box-shadow:
-    0 0 20px var(--neon-cyan),
-    inset 0 0 20px var(--neon-cyan),
+    0 0 20px var(--neon-yellow),
+    inset 0 0 20px var(--neon-yellow),
     0 0 40px var(--neon-pink);
   opacity: 0.8;
   filter: blur(1px);
@@ -163,8 +163,8 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: var(--neon-blue);
-  color: #fff;
+  background: var(--neon-yellow);
+  color: #000;
   font-family: 'Share Tech Mono', monospace;
   font-size: 0.6rem;
   padding: 4px 12px;
@@ -213,14 +213,14 @@
   }
 }
 
-/* Cyan (Linker.AI) */
-.card--cyan .card-banner  { background: var(--neon-cyan); }
-.card--cyan .card-type    { color: var(--neon-cyan); }
-.card--cyan .card-type::before { background: var(--neon-cyan); box-shadow: 0 0 8px var(--neon-cyan); }
-.card--cyan .tag:hover    { color: var(--neon-cyan); border-color: var(--neon-cyan); background: rgba(0, 243, 255, 0.05); }
-.card--cyan .card-link    { color: var(--neon-cyan); }
-.card--cyan .status-dot   { background: var(--neon-green); box-shadow: 0 0 8px var(--neon-green); }
-.card--cyan .card-status  { color: var(--neon-green); }
+/* Yellow/Gold (Linker.AI / Featured) */
+.card--cyan .card-banner  { background: var(--neon-yellow); }
+.card--cyan .card-type    { color: var(--neon-yellow); }
+.card--cyan .card-type::before { background: var(--neon-yellow); box-shadow: 0 0 8px var(--neon-yellow); }
+.card--cyan .tag:hover    { color: var(--neon-yellow); border-color: var(--neon-yellow); background: rgba(252, 238, 10, 0.05); }
+.card--cyan .card-link    { color: var(--neon-yellow); }
+.card--cyan .status-dot   { background: var(--neon-yellow); box-shadow: 0 0 8px var(--neon-yellow); }
+.card--cyan .card-status  { color: var(--neon-yellow); }
 
 /* Pink (SynQuest) */
 .card--pink .card-banner  { background: var(--neon-pink); }
@@ -240,11 +240,11 @@
 .card--gold .status-dot   { background: var(--neon-yellow); box-shadow: 0 0 8px var(--neon-yellow); }
 .card--gold .card-status  { color: var(--neon-yellow); }
 
-/* Teal (KerfCut) */
-.card--teal .card-banner  { background: #00ffcc; }
-.card--teal .card-type    { color: #00ffcc; }
-.card--teal .card-type::before { background: #00ffcc; box-shadow: 0 0 8px #00ffcc; }
-.card--teal .tag:hover    { color: #00ffcc; border-color: #00ffcc; background: rgba(0, 255, 204, 0.05); }
-.card--teal .card-link    { color: #00ffcc; }
+/* Red/Secondary (KerfCut) */
+.card--teal .card-banner  { background: var(--neon-red); }
+.card--teal .card-type    { color: var(--neon-red); }
+.card--teal .card-type::before { background: var(--neon-red); box-shadow: 0 0 8px var(--neon-red); }
+.card--teal .tag:hover    { color: var(--neon-red); border-color: var(--neon-red); background: rgba(255, 0, 60, 0.05); }
+.card--teal .card-link    { color: var(--neon-red); }
 .card--teal .status-dot   { background: var(--steel); animation: none; }
 .card--teal .card-status  { color: var(--text-dim); }

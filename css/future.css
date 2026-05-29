@@ -104,11 +104,11 @@
 .billboard-magenta .billboard-title { text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 40px var(--accent); }
 .billboard-magenta .billboard-desc { border-color: var(--accent); }
 
-.billboard-cyan {
-  border-color: var(--neon-cyan);
-  box-shadow: 0 0 20px var(--neon-cyan);
+.billboard-pink {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px var(--neon-pink);
 }
-.billboard-cyan:hover { box-shadow: 0 0 40px var(--neon-cyan); }
-.billboard-cyan .billboard-badge { background: var(--neon-cyan); box-shadow: 0 0 10px var(--neon-cyan); }
-.billboard-cyan .billboard-title { text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan); }
-.billboard-cyan .billboard-desc { border-color: var(--neon-cyan); }
+.billboard-pink:hover { box-shadow: 0 0 40px var(--neon-pink); }
+.billboard-pink .billboard-badge { background: var(--neon-pink); box-shadow: 0 0 10px var(--neon-pink); }
+.billboard-pink .billboard-title { text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink); }
+.billboard-pink .billboard-desc { border-color: var(--neon-pink); }

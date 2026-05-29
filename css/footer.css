@@ -46,7 +46,7 @@ footer {
 
 .sys-status {
   font-size: 0.55rem;
-  color: var(--neon-green);
+  color: var(--neon-yellow);
   opacity: 0.8;
   letter-spacing: 0.2em;
 }
@@ -68,8 +68,8 @@ footer {
 }
 
 .footer-links a:hover {
-  color: var(--neon-cyan);
-  text-shadow: 0 0 10px var(--neon-cyan);
+  color: var(--neon-yellow);
+  text-shadow: 0 0 10px var(--neon-yellow);
 }
 
 /* ── Mobile ── */

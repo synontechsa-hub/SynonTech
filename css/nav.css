@@ -13,7 +13,7 @@ nav {
   padding: 1rem 3rem;
   background: rgba(5, 5, 5, 0.9);
   backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(0, 243, 255, 0.15);
+  border-bottom: 1px solid rgba(252, 238, 10, 0.15);
 }
 
 .nav-logo {
@@ -29,7 +29,7 @@ nav {
 }
 
 .nav-logo:hover .nav-logo-img {
-  filter: drop-shadow(0 0 12px var(--neon-cyan));
+  filter: drop-shadow(0 0 12px var(--neon-yellow));
 }
 
 .nav-links {
@@ -50,8 +50,8 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--neon-cyan);
-  text-shadow: 0 0 12px rgba(0, 243, 255, 0.8);
+  color: var(--neon-yellow);
+  text-shadow: 0 0 12px rgba(252, 238, 10, 0.8);
 }
 
 .nav-cta {
@@ -78,8 +78,8 @@ nav {
 .nav-hamburger {
   display: none;
   background: transparent;
-  border: 1px solid var(--border-cyan);
-  color: var(--cyan);
+  border: 1px solid var(--neon-yellow);
+  color: var(--neon-yellow);
   font-size: 1.2rem;
   line-height: 1;
   padding: 0.35rem 0.65rem;
@@ -89,8 +89,8 @@ nav {
 }
 
 .nav-hamburger:hover {
-  background: rgba(0, 212, 255, 0.08);
-  box-shadow: var(--glow-cyan);
+  background: rgba(252, 238, 10, 0.08);
+  box-shadow: var(--glow-yellow);
 }
 
 .nav-links li.mobile-only {
@@ -117,7 +117,7 @@ nav {
     flex-direction: column;
     gap: 0;
     padding: 0.5rem 0 0.75rem;
-    border-top: 1px solid rgba(0, 212, 255, 0.1);
+    border-top: 1px solid rgba(252, 238, 10, 0.1);
     order: 3;
   }
 

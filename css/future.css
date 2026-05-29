@@ -21,7 +21,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
   box-shadow: 0 0 20px var(--primary);
   transform-style: preserve-3d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

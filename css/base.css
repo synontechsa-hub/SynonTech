@@ -14,7 +14,11 @@ html {
 }
 
 body {
-  background: var(--bg-main);
+  background-color: var(--bg-main);
+  background-image: linear-gradient(rgba(2, 11, 24, 0.85), rgba(2, 11, 24, 0.95)), url('../assets/backgrounds/nCZX7Wy4do1kuJV8mgvl--0--Dleii.webp');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   color: var(--text-main);
   font-family: 'Rajdhani', sans-serif;
   font-size: 16px;
@@ -71,6 +75,18 @@ section {
 .section-inner {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+/* ── Glass Panel HUD ── */
+.glass-panel {
+  background: rgba(10, 15, 25, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 136, 0.15);
+  border-left: 2px solid var(--accent);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .section-tag {

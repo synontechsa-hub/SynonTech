@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MKVoodoo: a local-first desktop video conversion cockpit for batch MKV-friendly media cleanup, smart naming, track control, and FFmpeg queues.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#090B12">
+  <link rel="canonical" href="https://synontech.github.io/mkvoodoo.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://synontech.github.io/mkvoodoo.html">
+  <meta property="og:title" content="MKVoodoo | synontech">
+  <meta property="og:description" content="Clean, convert, and queue your media locally with a private desktop video conversion cockpit.">
+  <meta property="og:image" content="https://synontech.github.io/assets/synontech_logo.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://synontech.github.io/mkvoodoo.html">
+  <meta property="twitter:title" content="MKVoodoo | synontech">
+  <meta property="twitter:description" content="Batch video conversion with local control, smart naming, and FFmpeg-powered queues.">
+  <meta property="twitter:image" content="https://synontech.github.io/assets/synontech_logo.png">
+  <title>MKVoodoo | synontech</title>
+  <link rel="icon" type="image/png" href="assets/synontech_favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/mkvoodoo.css">
+</head>
+<body class="mkvoodoo-page">
+
+  <div class="global-hud-container mkv-hud">
+    <div class="hud-frame top-left"><span>MKV_STACK<br>LOCAL</span></div>
+    <div class="hud-frame top-right"><span>FFMPEG<br>READY</span></div>
+    <div class="hud-frame bottom-left"><span>QUEUE_IDLE<br>PRIVATE</span></div>
+    <div class="hud-frame bottom-right"></div>
+  </div>
+
+  <nav class="mkv-nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/synontech_dark_background.png" alt="synontech" class="nav-logo-img">
+    </a>
+    <div class="mkv-nav-title">MKVoodoo</div>
+    <a href="index.html#portfolio" class="mkv-back-link">Back to projects</a>
+  </nav>
+
+  <main>
+    <section id="mkv-hero">
+      <div class="mkv-hero-grid"></div>
+      <div class="mkv-hero-warmth"></div>
+
+      <div class="mkv-hero-inner">
+        <div class="mkv-hero-copy">
+          <p class="mkv-eyebrow">Desktop Utility // Local Media Workbench</p>
+          <h1>MK<span>Voodoo</span></h1>
+          <p class="mkv-lead">
+            Clean, convert, and queue your media locally. MKVoodoo turns messy video folders into tidy, mobile-ready files with smart naming, track control, and FFmpeg-powered batch processing.
+          </p>
+          <div class="mkv-ctas">
+            <a href="https://github.com/synontechsa-hub" target="_blank" rel="noopener" class="mkv-btn-primary">View GitHub</a>
+            <a href="#mkv-workflow" class="mkv-btn-secondary">See workflow</a>
+          </div>
+        </div>
+
+        <div class="mkv-console" aria-label="MKVoodoo interface preview">
+          <div class="mkv-console-top">
+            <div class="mkv-window-controls">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="mkv-console-title">Batch Session</span>
+            <span class="mkv-console-status">LOCAL</span>
+          </div>
+          <div class="mkv-console-body">
+            <aside class="mkv-console-rail">
+              <span class="active">Dashboard</span>
+              <span>New Job</span>
+              <span>Queue</span>
+              <span>Settings</span>
+            </aside>
+            <div class="mkv-console-main">
+              <div class="mkv-status-row">
+                <div>
+                  <span class="mkv-mini-label">Files discovered</span>
+                  <strong>34</strong>
+                </div>
+                <div>
+                  <span class="mkv-mini-label">Encoder</span>
+                  <strong>NVENC</strong>
+                </div>
+                <div>
+                  <span class="mkv-mini-label">Preset</span>
+                  <strong>720p Medium</strong>
+                </div>
+              </div>
+              <div class="mkv-job-card">
+                <div class="mkv-job-head">
+                  <span>S02E05 - The Fall.mkv</span>
+                  <em>64%</em>
+                </div>
+                <div class="mkv-progress"><span></span></div>
+                <p>Audio: all tracks preserved // Subtitles: copied // Output: Matroska</p>
+              </div>
+              <div class="mkv-check-list">
+                <span>Smart naming enabled</span>
+                <span>Output folder verified</span>
+                <span>Queue can resume failed jobs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mkv-workflow" class="mkv-band">
+      <div class="section-inner">
+        <p class="mkv-section-tag">Workflow_01</p>
+        <h2 class="mkv-section-title">From messy folder to clean queue</h2>
+        <div class="mkv-flow">
+          <article>
+            <span>01</span>
+            <h3>Scan</h3>
+            <p>Drop files or select folders. MKVoodoo finds supported video files and prepares them for review.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Review</h3>
+            <p>Check smart season and episode naming before anything touches your output folder.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Tune</h3>
+            <p>Choose audio tracks, subtitle handling, bitrate, output destination, and conversion preset.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Queue</h3>
+            <p>Run the batch, monitor progress, retry failures, clear completed jobs, and keep moving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mkv-control" class="mkv-split-section">
+      <div class="section-inner mkv-split">
+        <div>
+          <p class="mkv-section-tag">Control_02</p>
+          <h2 class="mkv-section-title">Built for local control</h2>
+          <p class="mkv-copy">
+            MKVoodoo is designed for people who want their media workflow to stay on their machine. No upload step, no account ritual, no cloud dependency. Your folders stay yours.
+          </p>
+        </div>
+        <div class="mkv-control-grid">
+          <article>
+            <h3>Offline-first</h3>
+            <p>Conversions run locally through FFmpeg, with no remote processing path in the workflow.</p>
+          </article>
+          <article>
+            <h3>Track-aware</h3>
+            <p>Preserve all audio and subtitle tracks, or pick exactly what each output file should carry.</p>
+          </article>
+          <article>
+            <h3>Hardware-ready</h3>
+            <p>Detect NVIDIA NVENC and Intel Quick Sync where available, with CPU encoding as fallback.</p>
+          </article>
+          <article>
+            <h3>Queue-safe</h3>
+            <p>Skip existing files, retry failures, reset failed jobs, and clean completed history.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mkv-specs" class="mkv-band">
+      <div class="section-inner">
+        <p class="mkv-section-tag">Engine_03</p>
+        <h2 class="mkv-section-title">Conversion engine</h2>
+        <div class="mkv-spec-table">
+          <div><span>Stack</span><strong>Python backend + Flutter desktop UI</strong></div>
+          <div><span>Core engine</span><strong>FFmpeg process orchestration</strong></div>
+          <div><span>Inputs</span><strong>MKV, MP4, WebM</strong></div>
+          <div><span>Outputs</span><strong>MKV container, H.264 video, AAC or copied audio</strong></div>
+          <div><span>Presets</span><strong>1080p, 720p, and 480p in high, medium, and low profiles</strong></div>
+          <div><span>Hardware</span><strong>NVENC, Quick Sync, and CPU fallback</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mkv-bottom-cta">
+      <div class="section-inner">
+        <p class="mkv-section-tag">Status_04</p>
+        <h2 class="mkv-section-title">Batch conversion with fewer rituals</h2>
+        <p class="mkv-copy">
+          MKVoodoo is a focused utility for preparing media libraries without handing them to someone else's server.
+        </p>
+        <div class="mkv-ctas">
+          <a href="https://github.com/synontechsa-hub" target="_blank" rel="noopener" class="mkv-btn-primary">View GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mkv-footer">
+    <div class="footer-left">
+      <img src="assets/Powered_by_dark_background.png" alt="powered by synontech" class="footer-badge">
+    </div>
+    <ul class="footer-links">
+      <li><a href="https://github.com/synontechsa-hub" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://synontech.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
+      <li><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener">Support</a></li>
+      <li><a href="#" class="contact-link">Contact</a></li>
+    </ul>
+    <div class="footer-copy">
+      <span>&copy; <span id="current-year">2026</span> synontech. all rights reserved.</span>
+      <span class="sys-status">MKVOODOO // LOCAL</span>
+    </div>
+  </footer>
+
+  <script src="js/analytics.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

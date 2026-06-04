@@ -194,6 +194,9 @@
 }
 
 .creator-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 2.5rem;
 }
 

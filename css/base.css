@@ -1,6 +1,6 @@
 /* ============================================================
-   synontech — base
-   Reset, body, ambient effects, shared section styles, divider.
+   synontech — Industrial Base
+   Reset, body, schematic effects, shared section styles.
    ============================================================ */
 
 *, *::before, *::after {
@@ -15,7 +15,9 @@ html {
 
 body {
   background-color: var(--bg-main);
-  background-image: linear-gradient(rgba(2, 11, 24, 0.85), rgba(2, 11, 24, 0.95)), url('../assets/backgrounds/nCZX7Wy4do1kuJV8mgvl--0--Dleii.webp');
+  background-image:
+    linear-gradient(rgba(13, 17, 23, 0.9), rgba(13, 17, 23, 0.98)),
+    url('../assets/backgrounds/NybwpDQgYVXpMj4wzFSM--0--HRTrj.webp'); /* More industrial background if selected */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -26,35 +28,26 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Star Field (The 'Dull' foundation) ── */
+/* ── Schematic Grid (Precision layer) ── */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background-image:
-    radial-gradient(1px 1px at 10%  15%, rgba(255,255,255,0.2) 0%, transparent 100%),
-    radial-gradient(1px 1px at 30%  45%, rgba(255,255,255,0.1) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 50%  20%, rgba(252, 238, 10, 0.1) 0%, transparent 100%),
-    radial-gradient(1px 1px at 70%  60%, rgba(255,255,255,0.1) 0%, transparent 100%),
-    radial-gradient(1px 1px at 85%  30%, rgba(252, 238, 10, 0.1) 0%, transparent 100%);
+    linear-gradient(var(--slate-light) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, var(--slate-light) 0.5px, transparent 0.5px);
+  background-size: 50px 50px;
+  opacity: 0.15;
   pointer-events: none;
   z-index: 0;
 }
 
-/* ── Scanlines & Noise (The 'Gritty' layer) ── */
+/* ── Subtle Texture ── */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, 0.15) 2px,
-      rgba(0, 0, 0, 0.15) 4px
-    ),
-    radial-gradient(circle at center, transparent, rgba(0,0,0,0.4));
+  background: radial-gradient(circle at center, transparent, rgba(0,0,0,0.3));
   pointer-events: none;
   z-index: 1;
 }
@@ -77,23 +70,21 @@ section {
   margin: 0 auto;
 }
 
-/* ── Glass Panel HUD ── */
+/* ── Industrial Panel ── */
 .glass-panel {
-  background: rgba(10, 15, 25, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 255, 136, 0.15);
-  border-left: 2px solid var(--accent);
+  background: var(--slate-mid);
+  border: 1px solid var(--slate-light);
+  border-left: 3px solid var(--primary);
   padding: 2rem;
-  border-radius: 4px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  box-shadow: var(--shadow-heavy);
 }
 
 .section-tag {
   font-family: 'Share Tech Mono', monospace;
   font-size: 0.7rem;
   letter-spacing: 0.35em;
-  color: var(--accent);
+  color: var(--primary);
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -104,9 +95,10 @@ section {
 .section-tag::after {
   content: '';
   height: 1px;
-  width: 60px;
-  background: linear-gradient(90deg, var(--accent), transparent);
+  width: 40px;
+  background: var(--primary);
   display: inline-block;
+  opacity: 0.5;
 }
 
 .section-title {
@@ -117,59 +109,41 @@ section {
   margin-bottom: 1rem;
   line-height: 1.15;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.05em;
 }
 
 .section-title span {
   color: var(--primary);
-  text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 20px var(--primary);
-  animation: neon-flicker 4s infinite alternate;
+  text-shadow: none; /* Removed neon glow */
 }
 
-@keyframes neon-flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-    text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 20px var(--primary);
-  }
-  20%, 24%, 55% {
-    opacity: 0.4;
-    text-shadow: none;
-  }
-}
-
-/* ── Cyber Divider ── */
+/* ── Technical Divider ── */
 .cyber-divider {
   position: relative;
   z-index: 2;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(252, 238, 10, 0.2) 30%,
-    rgba(252, 238, 10, 0.2) 50%,
-    rgba(255, 0, 85, 0.2) 70%,
-    transparent
-  );
-  margin: 0;
+  background: var(--slate-light);
+  margin: 0 10%;
+  opacity: 0.3;
 }
 
 /* ── HUD Global Wrap ── */
 .global-hud-container {
   position: fixed;
-  inset: 6.5rem 2rem 4rem; /* Large top margin to clear nav */
+  inset: 6.5rem 2rem 4rem;
   pointer-events: none;
-  z-index: 50; /* Below nav (z-100) */
+  z-index: 50;
 }
 
 .hud-frame {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  border: 1px solid rgba(252, 238, 10, 0.2);
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--slate-light);
   font-family: 'Share Tech Mono', monospace;
-  font-size: 0.5rem;
+  font-size: 0.55rem;
   color: var(--text-dim);
-  padding: 4px;
+  padding: 6px;
   text-transform: uppercase;
 }
 
@@ -181,11 +155,10 @@ section {
 .hud-frame.bottom-right::after {
   content: '';
   position: absolute;
-  bottom: 8px; right: 8px;
-  width: 15px; height: 15px;
-  background: var(--neon-yellow);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  opacity: 0.3;
+  bottom: 10px; right: 10px;
+  width: 12px; height: 12px;
+  background: var(--secondary);
+  opacity: 0.5;
 }
 
 .hud-label {
@@ -194,7 +167,6 @@ section {
   font-size: 0.6rem;
   color: var(--text-dim);
   letter-spacing: 0.1em;
-  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
@@ -202,27 +174,7 @@ section {
   .hud-frame span { display: none; }
 }
 
-/* ── Graffiti Decals ── */
+/* ── Graffiti Decals (Disabled for Industrial Theme) ── */
 .graffiti-decal {
-  position: absolute;
-  z-index: 1; /* Below content, above background */
-  pointer-events: none;
-  mix-blend-mode: screen; /* Helps blend the black background of generated images */
-  opacity: 0.6;
-  filter: contrast(1.2) drop-shadow(0 0 10px rgba(255, 0, 85, 0.5));
-}
-
-.graffiti-1 {
-  top: 15%;
-  right: 5%;
-  width: 300px;
-  transform: rotate(15deg);
-}
-
-.graffiti-2 {
-  top: 45%;
-  left: -5%;
-  width: 400px;
-  transform: rotate(-10deg);
-  filter: contrast(1.2) drop-shadow(0 0 10px rgba(252, 238, 10, 0.5));
+  display: none;
 }

@@ -1,43 +1,36 @@
 /* ============================================================
-   synontech — true cyberpunk identity
-   Inspired by the high-contrast "Night City" aesthetic.
+   synontech — Industrial Engineering Identity
+   A technical, precision-focused theme.
    ============================================================ */
 
 :root {
-  /* --- The "Night" (Vibrant Neons) --- */
-  --neon-yellow:  #fcee0a; /* Iconic CP2077 Yellow */
-  --neon-cyan:    #00f3ff; /* Electric Cyan */
-  --neon-pink:    #ff0055; /* High-intensity Pink */
-  --neon-blue:    #005eff; /* Deep Electric Blue */
-  --neon-green:   #00ff88; /* Matrix/HUD Green */
-  --neon-red:     #ff003c; /* Warning Red */
-  --neon-magenta: #ff00ff; /* Night City Magenta */
+  /* --- Industrial Palette --- */
+  --slate-dark:   #0d1117; /* Deep workspace grey */
+  --slate-mid:    #161b22;
+  --slate-light:  #30363d;
+  --metal-edge:   #484f58;
 
-  /* --- The "Day" (Gritty Industrial) --- */
-  --black-void:   #050505;
-  --navy-deep:    #020b18;
-  --concrete:     #1a1a1a; /* Dull street grey */
-  --gunmetal:     #2d2d2d;
-  --steel:        #4f4f4f;
+  /* --- Logo / Logic Accents --- */
+  --kerf-green:   #00ff88; /* KerfSuite Green */
+  --stock-blue:   #005eff; /* KerfStock Blue */
+  --voodoo-hex:   #ef4dff; /* MKVoodoo Purple */
+  --warning-gold: #fcee0a; /* Caution/Highlight */
 
   /* --- Functional Assignments --- */
-  --primary:      var(--neon-yellow);
-  --secondary:    var(--neon-red);
-  --accent:       var(--neon-magenta);
+  --primary:      var(--kerf-green);
+  --secondary:    var(--warning-gold);
+  --accent:       var(--stock-blue);
 
-  --bg-main:      var(--black-void);
-  --bg-card:      rgba(20, 20, 20, 0.9);
-  --text-main:    #e0e0e0;
-  --text-dim:     #888888;
+  --bg-main:      var(--slate-dark);
+  --bg-card:      #161b22;
+  --text-main:    #c9d1d9;
+  --text-dim:     #8b949e;
 
-  /* --- Glows & FX --- */
-  --glow-cyan:   0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.2);
-  --glow-pink:   0 0 10px rgba(255, 0, 85, 0.5), 0 0 20px rgba(255, 0, 85, 0.2);
-  --glow-yellow: 0 0 15px rgba(252, 238, 10, 0.4);
-  --glow-red:    0 0 10px rgba(255, 0, 60, 0.5), 0 0 20px rgba(255, 0, 60, 0.2);
-  --glow-magenta: 0 0 15px rgba(255, 0, 255, 0.5);
+  /* --- Technical Shadows --- */
+  --shadow-etch:  inset 0 1px 1px rgba(0,0,0,0.5);
+  --shadow-heavy: 0 10px 30px rgba(0,0,0,0.5);
 
   /* --- Borders --- */
-  --border-main: 1px solid rgba(255, 255, 255, 0.1);
-  --border-neon: 1px solid var(--primary);
+  --border-main: 1px solid var(--slate-light);
+  --border-tech: 1px solid var(--metal-edge);
 }

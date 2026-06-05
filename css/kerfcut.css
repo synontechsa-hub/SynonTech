@@ -1,32 +1,51 @@
 /* ============================================================
-   KERFCUT SPECIFIC STYLES
-   Theme: Neon Green (Workshop/Calibration)
+   KERFSUITE SPECIFIC STYLES (INDUSTRIAL PRECISION)
+   Theme: Slate, Metal, and Engineering Accents
    ============================================================ */
 
 :root {
-  --kc-color: var(--neon-green);
-  --kc-glow: 0 0 10px rgba(0, 255, 136, 0.5), 0 0 20px rgba(0, 255, 136, 0.2);
-  --kc-bg-dark: rgba(0, 255, 136, 0.05);
-  --kc-border: 1px solid rgba(0, 255, 136, 0.3);
+  /* Industrial Palette */
+  --slate-dark:   #0d1117;
+  --slate-mid:    #161b22;
+  --slate-light:  #30363d;
+  --metal-edge:   #484f58;
+
+  --kc-green:     #00ff88; /* From KerfCut Logo */
+  --ks-blue:      #005eff; /* From KerfStock Logo */
+  --kc-gold:      #fcee0a; /* Warning/Logic accent */
+
+  /* Page defaults */
+  --kc-color:     var(--kc-green);
+  --kc-glow:      0 0 15px rgba(0, 255, 136, 0.2);
+  --kc-bg-dark:   var(--slate-mid);
+  --kc-border:    1px solid var(--slate-light);
 }
 
+/* Overriding body for industrial feel */
+.mkvoodoo-page, body {
+  background-image:
+    linear-gradient(rgba(13, 17, 23, 0.95), rgba(13, 17, 23, 0.98)),
+    url('../assets/backgrounds/NybwpDQgYVXpMj4wzFSM--0--HRTrj.webp') !important;
+}
+
+/* ── HUD ── */
 .global-hud-container .hud-frame {
-  color: var(--kc-color);
-  text-shadow: var(--kc-glow);
+  color: var(--text-dim);
+  border-color: var(--slate-light);
+  text-shadow: none;
 }
 
-/* --- NAV --- */
+/* ── NAV ── */
 .kerfcut-nav-title {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--kc-color);
+  color: #fff;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: var(--kc-glow);
 }
 
-/* --- HERO --- */
+/* ── HERO ── */
 #kerfcut-hero {
   position: relative;
   min-height: 90vh;
@@ -37,52 +56,29 @@
   text-align: center;
   padding: 4rem 2rem;
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+  background: var(--slate-dark);
 }
 
 .kerfcut-grid-bg {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: center;
-  z-index: -2;
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
 }
 
 .kerfcut-orb-1, .kerfcut-orb-2 {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: -1;
-  opacity: 0.15;
-}
-
-.kerfcut-orb-1 {
-  width: 400px;
-  height: 400px;
-  background: var(--kc-color);
-  top: -100px;
-  right: -100px;
-  animation: float 10s ease-in-out infinite alternate;
-}
-
-.kerfcut-orb-2 {
-  width: 300px;
-  height: 300px;
-  background: var(--neon-pink);
-  bottom: -50px;
-  left: -50px;
-  animation: float 8s ease-in-out infinite alternate-reverse;
+  display: none; /* Removed neon orbs */
 }
 
 .kerfcut-eyebrow {
   font-family: 'Share Tech Mono', monospace;
-  color: var(--kc-color);
+  color: var(--kc-gold);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 1.5rem;
 }
 
 .kerfcut-title {
@@ -92,331 +88,163 @@
   line-height: 1;
   margin-bottom: 0.5rem;
   color: #fff;
-  text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.kerfcut-title span {
+  color: var(--kc-green);
 }
 
 .kerfcut-tagline {
   font-family: 'Share Tech Mono', monospace;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   color: var(--text-dim);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .kerfcut-desc {
-  max-width: 700px;
+  max-width: 750px;
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   color: var(--text-main);
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+  opacity: 0.8;
 }
 
-.kerfcut-ctas {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
+/* ── BUTTONS (MACHINED) ── */
 .btn-kc {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 1rem 2rem;
+  gap: 1rem;
+  padding: 1.2rem 2.5rem;
   font-family: 'Orbitron', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
   text-transform: uppercase;
   color: #000;
-  background: var(--kc-color);
-  border: 1px solid var(--kc-color);
-  box-shadow: var(--kc-glow);
+  background: var(--kc-green);
+  border: 1px solid var(--kc-green);
   text-decoration: none;
   transition: all 0.3s ease;
-  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 100%, 0 100%);
 }
 
 .btn-kc:hover {
-  background: transparent;
-  color: var(--kc-color);
-  box-shadow: inset var(--kc-glow), var(--kc-glow);
+  transform: translate(2px, -2px);
+  box-shadow: -4px 4px 0 var(--slate-light);
+  background: #fff;
+  border-color: #fff;
 }
 
 .kerfcut-status {
+  margin-top: 3rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 0.9rem;
-  color: var(--kc-color);
-  padding: 0.5rem 1rem;
-  background: var(--kc-bg-dark);
-  border: var(--kc-border);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--slate-light);
+  background: rgba(0,0,0,0.3);
+  letter-spacing: 0.1em;
 }
 
 .kerfcut-status-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--kc-color);
+  width: 6px;
+  height: 6px;
+  background: var(--kc-green);
   border-radius: 50%;
-  box-shadow: var(--kc-glow);
-  animation: pulse 2s infinite;
+  animation: blink 2s infinite;
 }
 
-/* --- COMMON SECTIONS --- */
-.section-tag {
-  font-family: 'Share Tech Mono', monospace;
-  color: var(--kc-color);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-  text-align: center;
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
 
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(2rem, 5vw, 3rem);
-  text-align: center;
-  margin-bottom: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+/* ── APP HIGHLIGHT CARDS ── */
+.app-highlight-card {
+  background: var(--slate-mid);
+  border: 1px solid var(--slate-light);
+  border-left-width: 4px;
+  box-shadow: var(--shadow-heavy);
+  border-radius: 2px;
 }
 
-.section-title span {
-  color: var(--kc-color);
-  text-shadow: var(--kc-glow);
-}
-
-/* --- PAIN POINTS / FEATURES GRID --- */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* ── FEATURES GRID ── */
 .feature-card {
-  background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--kc-color);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+  background: var(--slate-mid);
+  border: 1px solid var(--slate-light);
+  padding: 2.5rem;
+  transition: border-color 0.3s ease;
 }
 
 .feature-card:hover {
-  border-color: rgba(0, 255, 136, 0.3);
-  transform: translateY(-5px);
-}
-
-.feature-card:hover::before {
-  transform: scaleX(1);
+  border-color: var(--metal-edge);
 }
 
 .feature-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--kc-color);
-  text-shadow: var(--kc-glow);
+  opacity: 0.8;
 }
 
 .feature-title {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 600;
-  font-size: 1.4rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #fff;
 }
 
-.feature-desc {
-  color: var(--text-dim);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* --- TERMINAL PREVIEW --- */
+/* ── LOGS ── */
 .log-container {
-  background: #0a0a0a;
-  border: var(--kc-border);
+  background: #050505;
+  border: 1px solid var(--slate-light);
   padding: 2rem;
   font-family: 'Share Tech Mono', monospace;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 255, 136, 0.1);
-  position: relative;
 }
 
 .log-container::before {
-  content: 'OPTIMIZER_CLI v1.0.0';
-  position: absolute;
-  top: -12px;
-  left: 20px;
-  background: var(--bg-main);
-  padding: 0 10px;
-  color: var(--kc-color);
-  font-size: 0.8rem;
-  border: var(--kc-border);
-}
-
-.log-entry {
-  margin-bottom: 1.5rem;
-}
-
-.log-system {
+  content: 'ST_SUITE_TERMINAL';
+  background: var(--slate-dark);
+  border: 1px solid var(--slate-light);
   color: var(--text-dim);
-  margin-bottom: 0.5rem;
 }
 
-.log-opt {
-  color: var(--kc-color);
-  text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
-  margin-bottom: 0.5rem;
-}
-
-.log-done {
-  color: var(--neon-yellow);
-  margin-bottom: 0.5rem;
-}
-
-.log-quote {
-  color: var(--neon-pink);
-}
-
-/* --- PRICING SECTION --- */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* ── PRICING ── */
 .pricing-card {
-  background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 2.5rem 2rem;
-  text-align: center;
-  position: relative;
-  transition: all 0.3s ease;
+  background: var(--slate-mid);
+  border: 1px solid var(--slate-light);
 }
 
 .pricing-card.featured {
-  border: var(--kc-border);
-  box-shadow: var(--kc-glow);
-  transform: translateY(-10px);
-}
-
-.pricing-card:hover {
-  border-color: var(--kc-color);
+  border: 1px solid var(--kc-green);
+  background: radial-gradient(circle at top right, rgba(0, 255, 136, 0.05), transparent);
 }
 
 .pricing-tier {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: var(--kc-color);
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.1em;
 }
 
 .pricing-price {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
   color: #fff;
-  margin-bottom: 2rem;
 }
 
-.pricing-price span {
-  font-size: 1rem;
-  color: var(--text-dim);
-}
-
-.pricing-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2rem 0;
-  text-align: left;
-}
-
-.pricing-features li {
-  color: var(--text-main);
-  margin-bottom: 1rem;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.1rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.pricing-features li::before {
-  content: '>';
-  position: absolute;
-  left: 0;
-  color: var(--kc-color);
-  font-family: 'Share Tech Mono', monospace;
-}
-
-/* --- TECH STACK CALLOUT --- */
+/* ── TECH STACK ── */
 .tech-stack-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--slate-dark);
+  border-color: var(--slate-light);
 }
 
-.tech-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-family: 'Share Tech Mono', monospace;
-  color: var(--text-dim);
-  font-size: 1.2rem;
-}
-
-.tech-item span {
-  color: #fff;
-}
-
-/* --- CTA BANNER --- */
-#kerfcut-cta-banner {
-  padding: 6rem 2rem;
-  text-align: center;
-  border-top: 1px solid rgba(0, 255, 136, 0.2);
-  background: radial-gradient(circle at center, rgba(0, 255, 136, 0.05) 0%, transparent 60%);
-}
-
-.cta-banner-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-.cta-banner-title span {
-  color: var(--kc-color);
-  text-shadow: var(--kc-glow);
-}
-
-.cta-banner-sub {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.5rem;
-  color: var(--text-dim);
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
+/* ── MOBILE ── */
+@media (max-width: 992px) {
+  .app-highlight-card {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    padding: 2rem !important;
+  }
 }

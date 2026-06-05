@@ -164,13 +164,62 @@
   50% { opacity: 0.3; }
 }
 
-/* ── APP HIGHLIGHT CARDS ── */
+/* ── APP HIGHLIGHT CARDS (MACHINED SHEEN) ── */
 .app-highlight-card {
   background: var(--slate-mid);
   border: 1px solid var(--slate-light);
   border-left-width: 4px;
   box-shadow: var(--shadow-heavy);
   border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Metallic Specular Sheen Effect */
+.app-highlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.03) 45%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 55%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-position: 150% 0;
+  transition: background-position 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Subtle Brushed Metal Texture */
+.app-highlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.01) 0px,
+    rgba(255, 255, 255, 0.01) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.app-highlight-card:hover::before {
+  background-position: -50% 0;
+}
+
+.app-info, .app-visual {
+  position: relative;
+  z-index: 2; /* Keep content above sheen */
 }
 
 /* ── FEATURES GRID ── */

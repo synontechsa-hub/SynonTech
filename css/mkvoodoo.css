@@ -1,24 +1,24 @@
 /* ============================================================
    MKVoodoo page
-   Palette: deep ink, copper, slate, sage
+   Palette: deep ink, violet, neon green
    ============================================================ */
 
 .mkvoodoo-page {
   --mkv-bg: #090b12;
-  --mkv-bg-soft: #0f1320;
-  --mkv-panel: #141a24;
-  --mkv-panel-raised: #1a2230;
-  --mkv-copper: #c7773a;
-  --mkv-copper-bright: #e49a5a;
-  --mkv-slate: #5e7c99;
-  --mkv-sage: #7fa36b;
+  --mkv-bg-soft: #101020;
+  --mkv-panel: #151522;
+  --mkv-panel-raised: #1c1a2e;
+  --mkv-copper: #a83cff;
+  --mkv-copper-bright: #ef4dff;
+  --mkv-slate: #7d66c8;
+  --mkv-sage: #68ff7a;
   --mkv-text: #efe7da;
-  --mkv-muted: #a79f93;
+  --mkv-muted: #aaa1b7;
   --mkv-shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
   background-color: var(--mkv-bg);
   background-image:
-    radial-gradient(circle at 18% 18%, rgba(199, 119, 58, 0.16), transparent 34rem),
-    radial-gradient(circle at 82% 34%, rgba(94, 124, 153, 0.14), transparent 30rem),
+    radial-gradient(circle at 18% 18%, rgba(168, 60, 255, 0.18), transparent 34rem),
+    radial-gradient(circle at 82% 34%, rgba(104, 255, 122, 0.1), transparent 30rem),
     linear-gradient(135deg, rgba(9, 11, 18, 0.98), rgba(15, 19, 32, 0.96));
   color: var(--mkv-text);
 }
@@ -26,9 +26,9 @@
 .mkvoodoo-page::before {
   background-image:
     radial-gradient(1px 1px at 12% 18%, rgba(239, 231, 218, 0.14) 0%, transparent 100%),
-    radial-gradient(1px 1px at 38% 50%, rgba(199, 119, 58, 0.16) 0%, transparent 100%),
-    radial-gradient(1px 1px at 74% 28%, rgba(127, 163, 107, 0.16) 0%, transparent 100%),
-    radial-gradient(1px 1px at 86% 68%, rgba(94, 124, 153, 0.16) 0%, transparent 100%);
+    radial-gradient(1px 1px at 38% 50%, rgba(168, 60, 255, 0.18) 0%, transparent 100%),
+    radial-gradient(1px 1px at 74% 28%, rgba(104, 255, 122, 0.16) 0%, transparent 100%),
+    radial-gradient(1px 1px at 86% 68%, rgba(125, 102, 200, 0.16) 0%, transparent 100%);
 }
 
 .mkvoodoo-page::after {
@@ -38,7 +38,7 @@
 }
 
 .mkv-hud .hud-frame {
-  border-color: rgba(199, 119, 58, 0.24);
+  border-color: rgba(168, 60, 255, 0.28);
   color: rgba(239, 231, 218, 0.34);
 }
 
@@ -48,7 +48,7 @@
 
 .mkv-nav {
   justify-content: space-between;
-  border-bottom: 1px solid rgba(199, 119, 58, 0.18);
+  border-bottom: 1px solid rgba(168, 60, 255, 0.22);
   background: rgba(9, 11, 18, 0.92);
   backdrop-filter: blur(18px);
 }
@@ -89,8 +89,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(199, 119, 58, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(199, 119, 58, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(168, 60, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 60, 255, 0.05) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: radial-gradient(ellipse 80% 80% at 48% 42%, black 0%, transparent 82%);
   opacity: 0.8;
@@ -102,7 +102,7 @@
   aspect-ratio: 1;
   right: -14rem;
   top: 10%;
-  background: radial-gradient(circle, rgba(199, 119, 58, 0.18), transparent 64%);
+  background: radial-gradient(circle, rgba(168, 60, 255, 0.24), transparent 64%);
   filter: blur(36px);
 }
 
@@ -112,8 +112,8 @@
   width: min(1180px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
-  gap: 3rem;
+  grid-template-columns: minmax(320px, 0.82fr) minmax(480px, 1fr);
+  gap: clamp(3rem, 6vw, 5.5rem);
   align-items: center;
 }
 
@@ -126,13 +126,22 @@
   color: var(--mkv-copper-bright);
 }
 
+.mkv-hero-title {
+  margin: 1.1rem 0 1.4rem;
+}
+
+.mkv-hero-logo {
+  display: block;
+  width: min(100%, 500px);
+  height: auto;
+  filter: drop-shadow(0 0 28px rgba(239, 77, 255, 0.32));
+}
+
 .mkv-hero-copy h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: clamp(3.4rem, 8vw, 6.4rem);
   font-weight: 900;
   line-height: 0.98;
   letter-spacing: 0;
-  margin: 1.1rem 0 1.4rem;
   color: var(--mkv-text);
 }
 
@@ -190,6 +199,9 @@
 }
 
 .mkv-console {
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
   background: linear-gradient(180deg, rgba(26, 34, 48, 0.96), rgba(13, 17, 27, 0.98));
   border: 1px solid rgba(239, 231, 218, 0.12);
   border-radius: 8px;

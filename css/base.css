@@ -173,10 +173,10 @@ section {
   text-transform: uppercase;
 }
 
-.hud-frame.top-left { top: 0; left: 0; border-right: none; border-bottom: none; }
+.hud-frame.top-left { display: none; }
 .hud-frame.top-right { top: 0; right: 0; border-left: none; border-bottom: none; text-align: right; }
-.hud-frame.bottom-left { bottom: 0; left: 0; border-right: none; border-top: none; display: flex; align-items: flex-end; }
-.hud-frame.bottom-right { bottom: 0; right: 0; border-left: none; border-top: none; }
+.hud-frame.bottom-left { display: none; }
+.hud-frame.bottom-right { display: none; }
 
 .hud-frame.bottom-right::after {
   content: '';

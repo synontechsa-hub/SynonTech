@@ -5,18 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="KerfSuite: A precision utility suite for serious workshops. Featuring KerfCut and KerfStock. By synontech.">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d1117">
   <link rel="canonical" href="https://synontech.github.io/kerfcut.html">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://synontech.github.io/kerfcut.html">
-  <meta property="og:title" content="KerfSuite — synontech">
+  <meta property="og:title" content="KerfSuite | synontech">
   <meta property="og:description" content="Precision workshop utilities. Maximize material yield with KerfCut and manage inventory with KerfStock.">
-  <meta property="og:image" content="https://synontech.github.io/assets/KerfSuite/KerfSuite - With Background.png">
+  <meta property="og:image" content="https://synontech.github.io/assets/KerfSuite/KerfSuite%20-%20With%20Background.png">
+
+  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://synontech.github.io/kerfcut.html">
-  <meta property="twitter:title" content="KerfSuite — synontech">
+  <meta property="twitter:title" content="KerfSuite | synontech">
   <meta property="twitter:description" content="Precision workshop utilities by synontech.">
-  <meta property="twitter:image" content="https://synontech.github.io/assets/KerfSuite/KerfSuite - With Background.png">
-  <title>KerfSuite — synontech</title>
+  <meta property="twitter:image" content="https://synontech.github.io/assets/KerfSuite/KerfSuite%20-%20With%20Background.png">
+
+  <title>KerfSuite | synontech</title>
   <link rel="icon" type="image/png" href="assets/synontech_favicon.png">
   
   <!-- Fonts -->
@@ -35,259 +41,248 @@
 <body class="kerfsuite-page">
 
   <!-- Global HUD Overlay -->
-  <div class="global-hud-container">
-    <div class="hud-frame top-left"><span>KERF_SUITE</span></div>
+  <div class="global-hud-container ks-hud">
+    <div class="hud-frame top-left"><span>KERF_SUITE<br>INDUSTRIAL</span></div>
     <div class="hud-frame top-right"><span id="user-coords">CALIBRATING...</span></div>
     <div class="hud-frame bottom-left"><span>ST_INDUSTRIAL<br>READY...</span></div>
     <div class="hud-frame bottom-right"></div>
   </div>
 
-<!-- ══════════════════════════════════════════════
-     NAV 
-═══════════════════════════════════════════════ -->
-<nav style="justify-content: space-between;">
-  <a href="index.html" class="nav-logo">
-    <img src="assets/synontech_dark_background.png" alt="synontech" class="nav-logo-img">
-  </a>
-  <div class="kerfcut-nav-title" style="display: flex; align-items: center; gap: 10px;">
-    <img src="assets/KerfSuite/KerfSuite.svg" alt="" style="height: 30px;">
-    KerfSuite
-  </div>
-  <a href="#kerfsuite-apps" class="btn-kc" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Explore Apps</a>
-</nav>
-
-<!-- ══════════════════════════════════════════════
-     HERO
-═══════════════════════════════════════════════ -->
-<section id="kerfcut-hero">
-  <div class="kerfcut-grid-bg"></div>
-
-  <p class="kerfcut-eyebrow">Workshop Ecosystem // Precision Utilities</p>
-
-  <div class="hero-logo-container" style="margin-bottom: 2rem; position: relative;">
-    <img src="assets/KerfSuite/KerfSuite - Without Background.png" alt="KerfSuite" style="width: 180px;">
-  </div>
-
-  <h1 class="kerfcut-title" style="margin-bottom: 0;">Kerf<span>Suite</span></h1>
-  <p class="kerfcut-tagline" style="margin-top: 0.5rem;">Precision at every stage of production.</p>
-
-  <p class="kerfcut-desc">
-    A growing ecosystem of integrated workshop utilities designed to bridge the gap between design and physical output. From algorithmic cut optimization to real-time stock management, KerfSuite is built for serious makers who demand zero-defect workflows.
-  </p>
-
-  <div class="kerfcut-ctas">
-    <a href="#kerfsuite-apps" class="btn-kc">
-      View Application Stack
+  <!-- Navigation -->
+  <nav class="ks-nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/synontech_dark_background.png" alt="synontech" class="nav-logo-img">
     </a>
-  </div>
+    <div class="ks-nav-title">
+      <img src="assets/KerfSuite/KerfSuite.svg" alt="KerfSuite Icon">
+      KerfSuite
+    </div>
+    <a href="index.html#portfolio" class="ks-back-link">Back to projects</a>
+  </nav>
 
-  <div class="kerfcut-status">
-    <span class="kerfcut-status-dot"></span>
-    ECOSYSTEM_ACTIVE // STACK_EXPANDING
-  </div>
-</section>
+  <main>
+    <!-- Hero Section -->
+    <section id="ks-hero">
+      <div class="ks-grid-bg"></div>
 
-<div class="cyber-divider"></div>
+      <p class="ks-eyebrow">Workshop Ecosystem // Precision Utilities</p>
 
-<!-- ══════════════════════════════════════════════
-     THE APPLICATIONS
-═══════════════════════════════════════════════ -->
-<section id="kerfsuite-apps" style="padding: 6rem 0;">
-  <div class="section-inner">
-    <p class="section-tag reveal">Application Stack</p>
-    <h2 class="section-title reveal">The <span>Core Suite</span></h2>
-    
-    <div class="apps-container" style="display: grid; gap: 4rem; margin-top: 4rem;">
+      <img src="assets/KerfSuite/KerfSuite%20-%20Without%20Background.png" alt="KerfSuite" class="ks-hero-logo">
 
-      <!-- KerfCut -->
-      <article class="app-highlight-card reveal glass-panel" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; border-left-color: var(--kc-green); padding: 3rem;">
-        <div class="app-visual" style="text-align: center;">
-          <img src="assets/KerfSuite/KerfCut.svg" alt="KerfCut Logo" style="width: 140px; margin-bottom: 1.5rem;">
-          <div class="status-tag" style="font-family: 'Share Tech Mono', monospace; color: var(--kc-green); font-size: 0.7rem; letter-spacing: 0.1em; border: 1px solid var(--kc-green); padding: 4px 12px; display: inline-block;">v1.0.4 // ACTIVE</div>
+      <h1 class="ks-title">Kerf<span>Suite</span></h1>
+      <p class="ks-tagline">Precision at every stage of production.</p>
+
+      <p class="ks-desc">
+        A growing ecosystem of integrated workshop utilities designed to bridge the gap between design and physical output. From algorithmic cut optimization to real-time stock management, KerfSuite is built for serious makers who demand zero-defect workflows.
+      </p>
+
+      <div class="ks-ctas">
+        <a href="#ks-apps" class="ks-btn">
+          View Application Stack
+        </a>
+      </div>
+
+      <div class="ks-status">
+        <span class="ks-status-dot"></span>
+        ECOSYSTEM_ACTIVE // STACK_EXPANDING
+      </div>
+    </section>
+
+    <div class="cyber-divider"></div>
+
+    <!-- Applications Section -->
+    <section id="ks-apps">
+      <div class="section-inner">
+        <p class="section-tag reveal">Application Stack</p>
+        <h2 class="section-title reveal">The <span>Core Suite</span></h2>
+
+        <div class="ks-apps-grid">
+
+          <!-- KerfCut -->
+          <article class="ks-app-card reveal">
+            <div class="ks-app-visual">
+              <img src="assets/KerfSuite/KerfCut.png" alt="KerfCut Logo">
+              <div class="ks-version-tag" style="color: var(--kc-green);">v1.0.4 // ACTIVE</div>
+            </div>
+            <div class="ks-app-info">
+              <h3>Kerf<span>Cut</span></h3>
+              <p class="ks-app-desc">
+                Algorithmic cut-list optimizer designed to maximize material yield. KerfCut takes your piece lists and packs them into raw sheets using MaxRects and Guillotine logic, generating instant quotes and PDF cut plans.
+              </p>
+              <ul class="ks-feature-list">
+                <li>Smart Sheet Packing</li>
+                <li>Instant Quoting</li>
+                <li>Grain Direction Locking</li>
+                <li>PDF Cut Plan Export</li>
+              </ul>
+              <div class="ks-ctas">
+                <a href="404.html" class="ks-btn">Download KerfCut</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- KerfStock -->
+          <article class="ks-app-card ks-stock reveal reveal-delay-1">
+            <div class="ks-app-visual">
+              <img src="assets/KerfSuite/KerfStock.png" alt="KerfStock Logo">
+              <div class="ks-version-tag" style="color: var(--ks-blue);">v0.8.2 // BETA</div>
+            </div>
+            <div class="ks-app-info">
+              <h3>Kerf<span>Stock</span></h3>
+              <p class="ks-app-desc">
+                Real-time workshop inventory tracking. KerfStock monitors sheet goods, hardware, and offcut inventory, alerting you when stock is low and integrating directly with KerfCut for material selection.
+              </p>
+              <ul class="ks-feature-list">
+                <li>Inventory Monitoring</li>
+                <li>Offcut Management</li>
+                <li>Low Stock Alerts</li>
+                <li>KerfCut Integration</li>
+              </ul>
+              <div class="ks-ctas">
+                <a href="404.html" class="ks-btn" style="background: var(--ks-blue); border-color: var(--ks-blue);">Initialize Beta</a>
+              </div>
+            </div>
+          </article>
+
         </div>
-        <div class="app-info">
-          <h3 style="font-family: 'Orbitron', sans-serif; font-size: 2.2rem; margin-bottom: 1rem;">Kerf<span>Cut</span></h3>
-          <p style="font-size: 1.1rem; color: var(--text-dim); margin-bottom: 1.5rem; line-height: 1.6;">
-            Algorithmic cut-list optimizer designed to maximize material yield. KerfCut takes your piece lists and packs them into raw sheets using MaxRects and Guillotine logic, generating instant quotes and PDF cut plans.
-          </p>
-          <ul class="pricing-features" style="margin-bottom: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem;">
-            <li>Smart Sheet Packing</li>
-            <li>Instant Quoting</li>
-            <li>Grain Direction Locking</li>
-            <li>PDF Cut Plan Export</li>
-          </ul>
-          <div style="display: flex; gap: 1rem;">
-            <a href="404.html" class="btn-kc" style="font-size: 0.7rem; padding: 0.8rem 1.5rem;">Download KerfCut</a>
+      </div>
+    </section>
+
+    <div class="cyber-divider"></div>
+
+    <!-- Tech Stack Section -->
+    <section id="ks-tech" class="reveal">
+      <div class="section-inner">
+        <div class="ks-tech-stack">
+          <div class="ks-tech-item"><span>Stack:</span> Python + Flutter</div>
+          <div class="ks-tech-item"><span>Engine:</span> Custom Heuristics</div>
+          <div class="ks-tech-item"><span>Database:</span> SQLite (Local)</div>
+          <div class="ks-tech-item"><span>Architecture:</span> Module-Based</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="ks-features">
+      <div class="section-inner">
+        <p class="section-tag reveal">Philosophy</p>
+        <h2 class="section-title reveal">Built for <span>Production</span></h2>
+
+        <div class="ks-features-grid">
+
+          <div class="ks-feature-card reveal">
+            <div class="ks-feature-icon">🛡️</div>
+            <h3 class="ks-feature-title">Local Independence</h3>
+            <p class="ks-feature-desc">Your workshop data belongs in your workshop. KerfSuite apps operate locally, ensuring your pricing, inventory, and job history stay on your machine—no cloud dependency.</p>
           </div>
-        </div>
-      </article>
 
-      <!-- KerfStock -->
-      <article class="app-highlight-card reveal reveal-delay-1 glass-panel" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; border-left-color: var(--ks-blue); padding: 3rem;">
-        <div class="app-visual" style="text-align: center;">
-          <img src="assets/KerfSuite/KerfStock.svg" alt="KerfStock Logo" style="width: 140px; margin-bottom: 1.5rem;">
-          <div class="status-tag" style="font-family: 'Share Tech Mono', monospace; color: var(--ks-blue); font-size: 0.7rem; letter-spacing: 0.1em; border: 1px solid var(--ks-blue); padding: 4px 12px; display: inline-block;">v0.8.2 // BETA</div>
-        </div>
-        <div class="app-info">
-          <h3 style="font-family: 'Orbitron', sans-serif; font-size: 2.2rem; margin-bottom: 1rem;">Kerf<span>Stock</span></h3>
-          <p style="font-size: 1.1rem; color: var(--text-dim); margin-bottom: 1.5rem; line-height: 1.6;">
-            Real-time workshop inventory tracking. KerfStock monitors sheet goods, hardware, and offcut inventory, alerting you when stock is low and integrating directly with KerfCut for material selection.
-          </p>
-          <ul class="pricing-features" style="margin-bottom: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem;">
-            <li>Inventory Monitoring</li>
-            <li>Offcut Management</li>
-            <li>Low Stock Alerts</li>
-            <li>KerfCut Integration</li>
-          </ul>
-          <div style="display: flex; gap: 1rem;">
-            <a href="404.html" class="btn-kc" style="font-size: 0.7rem; padding: 0.8rem 1.5rem; background: var(--ks-blue); border-color: var(--ks-blue); color: #fff;">Initialize Beta</a>
+          <div class="ks-feature-card reveal reveal-delay-1">
+            <div class="ks-feature-icon">🔗</div>
+            <h3 class="ks-feature-title">Seamless Integration</h3>
+            <p class="ks-feature-desc">The suite is built to talk to itself. Optimize a cut in KerfCut, and KerfStock automatically marks that material as consumed. One source of truth for the entire shop floor.</p>
           </div>
+
+          <div class="ks-feature-card reveal reveal-delay-2">
+            <div class="ks-feature-icon">⚡</div>
+            <h3 class="ks-feature-title">Rapid Response</h3>
+            <p class="ks-feature-desc">Engineered for speed. From background-threaded optimization to lightweight database lookups, the suite stays snappy even when managing thousands of stock items.</p>
+          </div>
+
         </div>
-      </article>
+      </div>
+    </section>
 
+    <div class="cyber-divider"></div>
+
+    <!-- Licensing Section -->
+    <section id="ks-pricing">
+      <div class="section-inner">
+        <p class="section-tag reveal">Licensing</p>
+        <h2 class="section-title reveal">Ecosystem <span>Access</span></h2>
+
+        <div class="ks-pricing-grid">
+
+          <!-- Single App -->
+          <div class="ks-pricing-card reveal">
+            <div class="ks-tier">Single Tool</div>
+            <div class="ks-price">$25 <span>/ year</span></div>
+            <ul class="ks-pricing-features">
+              <li>Full access to one app</li>
+              <li>(KerfCut OR KerfStock)</li>
+              <li>Single user license</li>
+              <li>Standard PDF exports</li>
+            </ul>
+            <a href="404.html" class="ks-btn ks-btn-outline" style="width: 100%; justify-content: center;">Choose Tool</a>
+          </div>
+
+          <!-- Full Suite -->
+          <div class="ks-pricing-card featured reveal reveal-delay-1">
+            <div class="ks-tier">Full Suite</div>
+            <div class="ks-price">$45 <span>/ year</span></div>
+            <ul class="ks-pricing-features">
+              <li>Access to ALL current apps</li>
+              <li>Early access to new modules</li>
+              <li>Cross-app data integration</li>
+              <li>Single user license</li>
+              <li>Priority bug response</li>
+            </ul>
+            <a href="404.html" class="ks-btn" style="width: 100%; justify-content: center;">Buy Suite License</a>
+          </div>
+
+          <!-- Workshop -->
+          <div class="ks-pricing-card reveal reveal-delay-2">
+            <div class="ks-tier">Workshop Pro</div>
+            <div class="ks-price">$149 <span>/ year</span></div>
+            <ul class="ks-pricing-features">
+              <li>Full Suite for 5 users</li>
+              <li>Custom offcut strategies</li>
+              <li>Shared network database</li>
+              <li>Priority feature requests</li>
+            </ul>
+            <a href="#" class="ks-btn contact-link" style="width: 100%; justify-content: center; background: transparent; color: var(--kc-green);">Contact Sales</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="ks-cta-banner">
+      <div class="section-inner">
+        <h2 class="ks-cta-title reveal">Calibrate your <span>workflow.</span></h2>
+        <p class="ks-cta-desc reveal">
+          Stop guessing and start optimizing. Join the workshop ecosystem built for precision-driven makers.
+        </p>
+        <div class="ks-ctas reveal reveal-delay-1">
+          <a href="404.html" class="ks-btn" style="margin: 0 auto;">
+            Initialize Full Suite
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="ks-footer">
+    <div class="ks-footer-left">
+      <img src="assets/Powered_by_dark_background.png" alt="powered by synontech" class="ks-footer-badge">
     </div>
-  </div>
-</section>
 
-<div class="cyber-divider"></div>
+    <ul class="ks-footer-links">
+      <li><a href="index.html">Main site</a></li>
+      <li><a href="https://github.com/synontechsa-hub" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" style="color: var(--neon-pink);">Support</a></li>
+      <li><a href="#" class="contact-link">Contact</a></li>
+    </ul>
 
-<!-- ══════════════════════════════════════════════
-     TECH STACK
-═══════════════════════════════════════════════ -->
-<section id="kerfcut-tech" class="tech-stack-container reveal">
-  <div class="tech-item"><span>Stack:</span> Python + Flutter</div>
-  <div class="tech-item"><span>Engine:</span> Custom Heuristics</div>
-  <div class="tech-item"><span>Database:</span> SQLite (Local)</div>
-  <div class="tech-item"><span>Architecture:</span> Module-Based</div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     CORE PHILOSOPHY
-═══════════════════════════════════════════════ -->
-<section id="kerfcut-features">
-  <div class="section-inner">
-    <p class="section-tag reveal">Philosophy</p>
-    <h2 class="section-title reveal">Built for <span>Production</span></h2>
-
-    <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
-      
-      <div class="feature-card reveal">
-        <div class="feature-icon">🛡️</div>
-        <h3 class="feature-title">Local Independence</h3>
-        <p class="feature-desc">Your workshop data belongs in your workshop. KerfSuite apps operate locally, ensuring your pricing, inventory, and job history stay on your machine—no cloud dependency.</p>
-      </div>
-
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-icon">🔗</div>
-        <h3 class="feature-title">Seamless Integration</h3>
-        <p class="feature-desc">The suite is built to talk to itself. Optimize a cut in KerfCut, and KerfStock automatically marks that material as consumed. One source of truth for the entire shop floor.</p>
-      </div>
-
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-icon">⚡</div>
-        <h3 class="feature-title">Rapid Response</h3>
-        <p class="feature-desc">Engineered for speed. From background-threaded optimization to lightweight database lookups, the suite stays snappy even when managing thousands of stock items.</p>
-      </div>
-
+    <div class="ks-footer-copy">
+      <span>&copy; <span id="current-year">2026</span> synontech. all rights reserved.</span>
+      <span class="sys-status">KERF_SUITE // ONLINE</span>
     </div>
-  </div>
-</section>
+  </footer>
 
-<div class="cyber-divider"></div>
-
-<!-- ══════════════════════════════════════════════
-     LICENSING
-═══════════════════════════════════════════════ -->
-<section id="kerfcut-pricing">
-  <div class="section-inner">
-    <p class="section-tag reveal">Licensing</p>
-    <h2 class="section-title reveal">Ecosystem <span>Access</span></h2>
-
-    <div class="pricing-grid">
-      
-      <!-- Single App -->
-      <div class="pricing-card reveal">
-        <div class="pricing-tier">Single Tool</div>
-        <div class="pricing-price">$25 <span>/ year</span></div>
-        <ul class="pricing-features">
-          <li>Full access to one app</li>
-          <li>(KerfCut OR KerfStock)</li>
-          <li>Single user license</li>
-          <li>Standard PDF exports</li>
-        </ul>
-        <a href="404.html" class="btn-kc" style="width: 100%; justify-content: center;">Choose Tool</a>
-      </div>
-
-      <!-- Full Suite -->
-      <div class="pricing-card featured reveal reveal-delay-1">
-        <div class="pricing-tier">Full Suite</div>
-        <div class="pricing-price">$45 <span>/ year</span></div>
-        <ul class="pricing-features">
-          <li>Access to ALL current apps</li>
-          <li>Early access to new modules</li>
-          <li>Cross-app data integration</li>
-          <li>Single user license</li>
-          <li>Priority bug response</li>
-        </ul>
-        <a href="404.html" class="btn-kc" style="width: 100%; justify-content: center;">Buy Suite License</a>
-      </div>
-
-      <!-- Workshop -->
-      <div class="pricing-card reveal reveal-delay-2">
-        <div class="pricing-tier">Workshop Pro</div>
-        <div class="pricing-price">$149 <span>/ year</span></div>
-        <ul class="pricing-features">
-          <li>Full Suite for 5 users</li>
-          <li>Custom offcut strategies</li>
-          <li>Shared network database</li>
-          <li>Priority feature requests</li>
-        </ul>
-        <a href="#" class="btn-kc contact-link" style="width: 100%; justify-content: center; background: transparent; color: var(--kc-green);">Contact Sales</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     BOTTOM CTA BANNER
-═══════════════════════════════════════════════ -->
-<section id="kerfcut-cta-banner">
-  <div class="section-inner">
-    <h2 class="cta-banner-title reveal">Calibrate your <span>workflow.</span></h2>
-    <p class="cta-banner-sub reveal">
-      Stop guessing and start optimizing. Join the workshop ecosystem built for precision-driven makers.
-    </p>
-    <div class="kerfcut-ctas reveal reveal-delay-1" style="justify-content: center; opacity: 1; animation: none;">
-      <a href="404.html" class="btn-kc">
-        Initialize Full Suite
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════════════ -->
-<footer>
-  <div class="footer-left">
-    <img src="assets/Powered_by_dark_background.png" alt="powered by synontech" class="footer-badge">
-  </div>
-
-  <div class="footer-right">
-    <a href="index.html">&larr; Main site</a>
-    <a href="https://github.com/synontechsa-hub" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" style="color: var(--neon-pink);">Support</a>
-    <a href="#" class="contact-link">Contact</a>
-  </div>
-  <div class="footer-copy">
-    <span>&copy; <span id="current-year">2026</span> synontech. all rights reserved.</span>
-    <span class="sys-status">KERF_SUITE // ONLINE</span>
-  </div>
-</footer>
-
-<script src="js/analytics.js" defer></script>
-<script src="js/main.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+  <script src="js/main.js" defer></script>
 
 </body>
 </html>

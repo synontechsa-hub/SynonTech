@@ -86,26 +86,25 @@
   padding-top: 1.25rem;
 }
 
-/* Red/Secondary (KerfCut) */
-.card--teal:hover { box-shadow: 0 0 30px rgba(255, 0, 60, 0.1); border-color: rgba(255, 0, 60, 0.3); }
-.card--pink:hover { box-shadow: 0 0 30px rgba(255, 0, 85, 0.1); border-color: rgba(255, 0, 85, 0.3); }
+/* Safety Orange (KerfSuite) */
+.card--teal:hover { box-shadow: 0 0 30px rgba(255, 102, 0, 0.4); border-color: rgba(255, 102, 0, 0.6); }
+.card--teal .card-type { color: #FF6600; }
+.card--teal .card-banner::after { border-color: #FF6600; box-shadow: inset 0 0 10px rgba(255, 102, 0, 0.2); }
+.card--teal .card-banner { background: #0a0a0a !important; }
+
+/* Safety Red (SynQuest / Malevolent) */
+.card--pink:hover { box-shadow: 0 0 30px rgba(255, 51, 51, 0.4); border-color: rgba(255, 51, 51, 0.6); }
+.card--pink .card-type { color: #FF3333; }
+.card--pink .card-banner::after { border-color: #FF3333; box-shadow: inset 0 0 10px rgba(255, 51, 51, 0.2); }
+.card--pink .card-banner { background: #0a0a0a !important; }
+
+/* Gold (SynConvert) */
 .card--gold:hover { box-shadow: 0 0 30px rgba(252, 238, 10, 0.1); border-color: rgba(252, 238, 10, 0.3); }
-.card--purple:hover { box-shadow: 0 0 30px rgba(168, 60, 255, 0.1); border-color: rgba(168, 60, 255, 0.3); }
 
-/* Banner Frames for standard cards */
-.project-card .card-banner::after {
-  content: '';
-  position: absolute;
-  width: 85%;
-  height: 70%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 0.5;
-}
+/* Purple (MKVoodoo) */
+.card--purple:hover { box-shadow: 0 0 30px rgba(168, 60, 255, 0.4); border-color: rgba(168, 60, 255, 0.6); }
+.card--purple .card-banner { background: #0a0a0a !important; }
 
-.card--teal .card-banner::after { border-color: var(--neon-red); box-shadow: inset 0 0 10px rgba(255, 0, 60, 0.2); }
-.card--pink .card-banner::after { border-color: var(--neon-pink); box-shadow: inset 0 0 10px rgba(255, 0, 85, 0.2); }
-.card--gold .card-banner::after { border-color: var(--neon-yellow); box-shadow: inset 0 0 10px rgba(252, 238, 10, 0.2); }
-.card--purple .card-banner::after { border-color: #a83cff; box-shadow: inset 0 0 10px rgba(168, 60, 255, 0.2); }
 
 /* ── Featured "Series 2" Card ── */
 .card--featured {
@@ -225,16 +224,14 @@
 .card--cyan .card-status  { color: var(--neon-yellow); }
 
 /* Pink (SynQuest) */
-.card--pink .card-banner  { background: var(--neon-pink); }
-.card--pink .card-type    { color: var(--neon-pink); }
-.card--pink .card-type::before { background: var(--neon-pink); box-shadow: 0 0 8px var(--neon-pink); }
-.card--pink .tag:hover    { color: var(--neon-pink); border-color: var(--neon-pink); background: rgba(255, 0, 85, 0.05); }
-.card--pink .card-link    { color: var(--neon-pink); }
-.card--pink .status-dot   { background: var(--neon-pink); box-shadow: 0 0 8px var(--neon-pink); }
-.card--pink .card-status  { color: var(--neon-pink); }
+.card--pink .card-type    { color: #FF3333; }
+.card--pink .card-type::before { background: #FF3333; box-shadow: 0 0 8px #FF3333; }
+.card--pink .tag:hover    { color: #FF3333; border-color: #FF3333; background: rgba(255, 51, 51, 0.05); }
+.card--pink .card-link    { color: #FF3333; }
+.card--pink .status-dot   { background: #FF3333; box-shadow: 0 0 8px #FF3333; }
+.card--pink .card-status  { color: #FF3333; }
 
 /* Gold (SynConvert) */
-.card--gold .card-banner  { background: var(--neon-yellow); }
 .card--gold .card-type    { color: var(--neon-yellow); }
 .card--gold .card-type::before { background: var(--neon-yellow); box-shadow: 0 0 8px var(--neon-yellow); }
 .card--gold .tag:hover    { color: var(--neon-yellow); border-color: var(--neon-yellow); background: rgba(252, 238, 10, 0.05); }
@@ -243,16 +240,14 @@
 .card--gold .card-status  { color: var(--neon-yellow); }
 
 /* Red/Secondary (KerfCut) */
-.card--teal .card-banner  { background: var(--neon-red); }
-.card--teal .card-type    { color: var(--neon-red); }
-.card--teal .card-type::before { background: var(--neon-red); box-shadow: 0 0 8px var(--neon-red); }
-.card--teal .tag:hover    { color: var(--neon-red); border-color: var(--neon-red); background: rgba(255, 0, 60, 0.05); }
-.card--teal .card-link    { color: var(--neon-red); }
+.card--teal .card-type    { color: #FF6600; }
+.card--teal .card-type::before { background: #FF6600; box-shadow: 0 0 8px #FF6600; }
+.card--teal .tag:hover    { color: #FF6600; border-color: #FF6600; background: rgba(255, 102, 0, 0.05); }
+.card--teal .card-link    { color: #FF6600; }
 .card--teal .status-dot   { background: var(--steel); animation: none; }
 .card--teal .card-status  { color: var(--text-dim); }
 
 /* Purple (MKVoodoo) */
-.card--purple .card-banner  { background: #a83cff; }
 .card--purple .card-type    { color: #ef4dff; }
 .card--purple .card-type::before { background: #ef4dff; box-shadow: 0 0 8px #ef4dff; }
 .card--purple .tag:hover    { color: #ef4dff; border-color: #ef4dff; background: rgba(239, 77, 255, 0.05); }

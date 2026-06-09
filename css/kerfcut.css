@@ -191,15 +191,52 @@
 .ks-status {
   margin-top: 4rem;
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--ks-grey-light);
-  padding: 0.75rem 1.5rem;
+  padding: 1.2rem 1.8rem;
   border: 1px solid var(--ks-grey-dark);
-  background: rgba(0,0,0,0.3);
-  letter-spacing: 0.15em;
+  background: rgba(0,0,0,0.5);
+  letter-spacing: 0.1em;
+  text-align: left;
+  border-radius: 2px;
+  position: relative;
+}
+
+.ks-gcode-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--ks-grey-light);
+  border-bottom: 1px solid rgba(153, 153, 153, 0.1);
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.ks-gcode-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ks-gcode-line {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.ks-gcode-line:hover {
+  opacity: 1;
+}
+
+.ks-gcode-line span {
+  color: var(--ks-orange);
+  margin-right: 1rem;
+  opacity: 0.8;
 }
 
 .ks-status-dot {

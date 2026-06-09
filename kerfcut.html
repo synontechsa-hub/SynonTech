@@ -83,8 +83,17 @@
       </div>
 
       <div class="ks-status reveal">
-        <span class="ks-status-dot"></span>
-        ECOSYSTEM_ACTIVE // STACK_EXPANDING
+        <div class="ks-gcode-header">
+          <span class="ks-status-dot"></span>
+          PROGRAM_FEED: CUT_OPTIMIZATION_V1.0.4
+        </div>
+        <div class="ks-gcode-block">
+          <div class="ks-gcode-line"><span>N10</span> G21 G90 G00 X0.0 Y0.0</div>
+          <div class="ks-gcode-line"><span>N20</span> M03 S18000</div>
+          <div class="ks-gcode-line"><span>N30</span> G01 Z-2.5 F500</div>
+          <div class="ks-gcode-line"><span>N40</span> G01 X2440.0 Y1220.0 F2400</div>
+          <div class="ks-gcode-line"><span>N50</span> M05 M30</div>
+        </div>
       </div>
     </section>
 

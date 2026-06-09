@@ -109,6 +109,10 @@ section {
   display: inline-block;
 }
 
+.kerfsuite-page .section-tag::after {
+  background: linear-gradient(90deg, var(--ks-orange), transparent);
+}
+
 .section-title {
   font-family: 'Orbitron', monospace;
   font-size: clamp(1.8rem, 4vw, 2.8rem);

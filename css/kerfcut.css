@@ -15,6 +15,7 @@
 
   --ks-orange:      #FF6600; /* Safety Orange */
   --ks-orange-alt:  #FF8636; /* Bright Orange highlight */
+  --ks-red:         #FF3333; /* Safety Red */
 
   /* Text */
   --ks-text:        #e6edf3;
@@ -422,4 +423,29 @@
 @media (max-width: 992px) {
   .ks-app-card { grid-template-columns: 1fr; text-align: center; padding: 2.5rem; }
   .ks-feature-list { grid-template-columns: 1fr; }
+}
+
+/* ── FOOTER LINKS ── */
+.ks-footer-links a {
+  text-decoration: none;
+  color: var(--ks-orange);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.ks-footer-links a:hover {
+  color: #fff;
+  border-bottom-color: var(--ks-orange);
+}
+
+.ks-footer-links .ks-support-link {
+  color: var(--ks-red);
+}
+
+.ks-footer-links .ks-support-link:hover {
+  border-bottom-color: var(--ks-red);
 }

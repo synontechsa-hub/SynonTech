@@ -390,15 +390,93 @@
 }
 
 /* ── PRICING ── */
+.ks-nav-link {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--ks-grey-light);
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  padding: 0.2rem 0;
+}
+
+.ks-nav-link:hover {
+  color: var(--ks-orange);
+  border-bottom-color: var(--ks-orange);
+}
+
 .ks-pricing-card {
   background: var(--ks-bg-card);
   border: 1px solid var(--ks-grey-dark);
   padding: 3rem 2rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-.ks-pricing-card.featured {
+.ks-pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.ks-pricing-card.active-tier {
   border-color: var(--ks-orange);
-  background: radial-gradient(circle at top right, rgba(255, 102, 0, 0.05), var(--ks-bg-card));
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.1);
+  background: radial-gradient(circle at top right, rgba(255, 102, 0, 0.08), var(--ks-bg-card));
+  animation: borderGlow 4s infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.15);
+    border-color: rgba(255, 102, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(255, 102, 0, 0.3);
+    border-color: rgba(255, 102, 0, 1);
+  }
+}
+
+.ks-pricing-card.coming-soon-card {
+  opacity: 0.6;
+  border-color: rgba(255, 255, 255, 0.05);
+  background: rgba(22, 27, 34, 0.2);
+}
+
+.ks-pricing-card.coming-soon-card:hover {
+  opacity: 0.75;
+  transform: none;
+  box-shadow: none;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--ks-grey-light);
+  border: 1px solid var(--ks-grey-dark);
+  padding: 4px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+}
+
+.ks-tier {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .ks-price {
@@ -413,10 +491,27 @@
   color: var(--ks-grey-light);
 }
 
+.ks-pricing-features {
+  padding: 0;
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+}
+
 .ks-pricing-features li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  padding: 0.8rem 0 0.8rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   color: var(--ks-grey-light);
+  font-size: 0.95rem;
+}
+
+.ks-pricing-features li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--ks-orange);
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
 }
 
 /* ── MOBILE ── */

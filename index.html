@@ -81,17 +81,21 @@
 ═══════════════════════════════════════════════ -->
   <nav>
     <a href="#hero" class="nav-logo">
-      <img src="assets/Synontech/Synontech_dark.svg" alt="synontech" class="nav-logo-img">
+      <img src="assets/Synontech/synontech_wordmark_light_background.png" alt="synontech" class="nav-logo-img" style="height: 36px;">
     </a>
 
     <ul class="nav-links" id="nav-links">
       <li><a href="#products">Products</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="future.html">Future</a></li>
+      <li class="mobile-only"><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener">Support</a></li>
       <li class="mobile-only"><a href="#" class="contact-link">Contact</a></li>
     </ul>
 
-    <a href="#" class="nav-cta contact-link">Contact</a>
+    <div style="display: flex; gap: 1rem; align-items: center;" class="desktop-only">
+      <a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" class="nav-cta" style="background: transparent; color: var(--color-deep-navy); border: 1px solid var(--color-border-gray);">Support</a>
+      <a href="#" class="nav-cta contact-link">Contact</a>
+    </div>
 
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </nav>
@@ -109,8 +113,15 @@
       <p class="hero-sub">Tools for creators, professionals, and growing businesses.</p>
       
       <div class="hero-buttons">
-        <a href="#products" class="btn-primary-tactical">View Products</a>
-        <a href="#about" class="btn-secondary-tactical">About Synontech</a>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <a href="#products" class="btn-primary-tactical">View Products</a>
+          <a href="https://byte-this-games.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical">Byte This Games</a>
+          <a href="https://synonimity.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical">Synonimity</a>
+          <a href="https://bruce-gordon.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical">Bruce Gordon</a>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 1rem;">
+          <a href="#about" class="btn-secondary-tactical">About Synontech</a>
+        </div>
       </div>
     </div>
   </section>

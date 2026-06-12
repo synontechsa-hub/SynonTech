@@ -1,379 +1,109 @@
 /* ============================================================
-   synontech — hero (TACTICAL HUD VERSION)
+   Synontech — Hero
    ============================================================ */
 
 #hero {
   position: relative;
   z-index: 2;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: left; /* Shifted to left for asymmetry */
-  padding: 6rem 10% 4rem;
+  text-align: center;
+  padding: 8rem 10% 4rem;
   overflow: hidden;
-  background: var(--black-void);
+  background: var(--bg-main);
 }
 
 .hero-content {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ── HUD Layer (Moved to base.css for global use) ── */
-.hero-hud-container {
-  position: absolute;
-  inset: 2rem;
-  pointer-events: none;
-  z-index: 10;
+.hero-eyebrow {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
-/* ── Hero Specific Labels ── */
-.hero-labels {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 15;
-}
-
-.hud-label.top-center {
-  top: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--black-void);
-  padding: 0 1rem;
-  white-space: nowrap;
-}
-
-.hud-label.top-left-inner {
-  top: 3rem;
-  left: 110px;
-}
-
-/* ── Grid & Data Stream ── */
-.hero-grid-bg {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-.hero-data-stream {
-  position: absolute;
-  inset: 0;
-  opacity: 0.05;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(252, 238, 10, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(252, 238, 10, 0.1) 1px, transparent 1px);
-  background-size: 100% 4px;
-  animation: dataStream 30s linear infinite;
-}
-
-@keyframes dataStream {
-  from { background-position: 0 0; }
-  to { background-position: 0 1000px; }
-}
-
-/* ── Title (Chromatic Aberration & Pulse) ── */
 .hero-title {
-  font-family: 'Orbitron', monospace;
-  font-size: clamp(2.2rem, 7vw, 6rem);
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.02em;
-  margin-bottom: 2rem;
-  color: #fff;
-  position: relative;
-  text-shadow:
-    2px 0 var(--neon-pink),
-    -2px 0 var(--neon-yellow);
-  animation: chromaticPulse 5s infinite;
-}
-
-@keyframes chromaticPulse {
-  0%, 100% { text-shadow: 2px 0 var(--neon-pink), -2px 0 var(--neon-yellow); }
-  50% { text-shadow: 4px 0 var(--neon-pink), -4px 0 var(--neon-yellow), 0 0 10px rgba(255,255,255,0.2); }
+  font-family: var(--font-primary);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  color: var(--color-deep-navy);
 }
 
 .hero-title .line1, .hero-title .line2 {
   display: block;
 }
 
-.hero-title::before {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  width: 100%;
-  height: 100%;
-  color: rgba(255,255,255,0.05);
-  z-index: -1;
-}
-
-/* ── Sub & Manifesto ── */
-.hero-eyebrow {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.8rem;
-  color: var(--neon-yellow);
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-
-/* ── Middle Row (Asymmetric Layout) ── */
-.hero-middle-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem; /* Reduced gap to pull video closer to text */
-  margin-bottom: 3rem;
-}
-
-.hero-desc-block {
-  border-left: 2px solid rgba(255,255,255,0.1);
-  padding-left: 2rem;
-  max-width: 500px;
-}
-
-.hero-video-container {
-  flex: 0 0 420px; /* Increased to ~420px (15% more from original 370px target) */
-  opacity: 0;
-  animation: fadeUp 0.8s 0.6s ease forwards;
-  position: relative;
-}
-
-.video-frame {
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0,0,0,0.6);
-  padding: 4px;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 92% 100%, 0 100%);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: perspective(1000px) rotateY(-5deg); /* Subtle tactical tilt */
-}
-
-.video-frame::before {
-  content: 'LIVE_FEED // TRK_042';
-  position: absolute;
-  top: -18px;
-  left: 0;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.5rem;
-  color: var(--neon-pink);
-  letter-spacing: 0.1em;
-}
-
-.video-frame::after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 6px;
-  height: 6px;
-  background: var(--neon-red);
-  border-radius: 50%;
-  animation: blink 1s infinite;
-  z-index: 10;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.hero-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  mix-blend-mode: screen; /* Makes black backgrounds transparent for that hologram look */
-  filter: contrast(1.1) brightness(1.2) saturate(1.2);
-}
-
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(252, 238, 10, 0.05), transparent);
-  pointer-events: none;
-}
-
-.video-brackets::before, .video-brackets::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 1px solid var(--neon-pink);
-  pointer-events: none;
-}
-
-.video-brackets::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
-.video-brackets::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
-
 .hero-sub {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--text-dim);
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  line-height: 1.6;
 }
 
-.hero-manifesto {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.9rem;
-  letter-spacing: 0.2em;
-  color: #fff;
-}
-
-/* ── Tactical Buttons ── */
 .hero-buttons {
   display: flex;
-  gap: 3rem;
+  gap: 1.5rem;
   align-items: center;
-}
-
-/* View Projects Button */
-.tactical-btn-wrapper {
-  position: relative;
-}
-
-.btn-module-tab {
-  position: absolute;
-  top: -12px;
-  left: 20px;
-  background: var(--neon-yellow);
-  color: #000;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.5rem;
-  padding: 2px 8px;
-  font-weight: 900;
-  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
-  z-index: 2;
+  justify-content: center;
 }
 
 .btn-primary-tactical {
-  display: flex;
-  flex-direction: column;
-  background: var(--neon-yellow);
-  color: #000;
-  padding: 1.2rem 3rem 0.8rem;
+  display: inline-flex;
+  background: var(--color-deep-navy);
+  color: var(--color-white);
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-md);
   text-decoration: none;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 95% 100%, 0 100%);
-  position: relative;
-  transition: transform 0.2s;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary-tactical:hover {
-  transform: translate(4px, -4px);
-  box-shadow: -4px 4px 0 var(--black-void), -8px 8px 0 var(--neon-pink);
-}
-
-.btn-primary-tactical .btn-text {
-  font-family: 'Orbitron', monospace;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 1.1rem;
-}
-
-.btn-progress-bar {
-  width: 100%;
-  height: 3px;
-  background: rgba(0,0,0,0.2);
-  margin-top: 8px;
-}
-
-.btn-progress-bar .fill {
-  width: 98%;
-  height: 100%;
-  background: #000;
-}
-
-.btn-status {
-  position: absolute;
-  right: 15px;
-  bottom: 4px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.55rem;
-  font-weight: 900;
-}
-
-.btn-wires {
-  position: absolute;
-  left: -25px;
-  top: 50%;
-  width: 20px;
-  height: 30px;
-  background-image:
-    linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%),
-    repeating-linear-gradient(0deg, var(--neon-yellow) 0, var(--neon-yellow) 2px, transparent 2px, transparent 6px);
-  transform: translateY(-50%);
-}
-
-/* About Button */
-.init-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.init-tag {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.7rem;
-  color: var(--text-dim);
+  background-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary-tactical {
-  font-family: 'Orbitron', monospace;
-  color: #fff;
+  display: inline-flex;
+  background: transparent;
+  color: var(--color-deep-navy);
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-gray);
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.85rem;
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 0.8rem 2rem;
-  clip-path: polygon(0 20%, 10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%);
-  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
 }
 
 .btn-secondary-tactical:hover {
-  background: rgba(255,255,255,0.05);
-  border-color: var(--neon-yellow);
-}
-
-/* ── Stats ── */
-.hero-stats {
-  position: absolute;
-  bottom: 3rem;
-  right: 10%;
-  display: flex;
-  gap: 4rem;
-}
-
-.stat-num {
-  font-family: 'Orbitron', monospace;
-  font-size: 1.8rem;
-  font-weight: 900;
-  color: var(--neon-yellow);
-  display: block;
-}
-
-.stat-label {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.6rem;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  background: var(--color-border-gray);
 }
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
-  #hero { padding: 8rem 1.5rem 4rem; text-align: center; }
-  .hero-hud-container { inset: 1rem; }
-  .hero-middle-row { flex-direction: column; align-items: center; gap: 2rem; }
-  .hero-desc-block { border-left: none; padding-left: 0; }
-  .hero-video-container { max-width: 100%; }
-  .hero-buttons { flex-direction: column; gap: 2rem; }
-  .hero-stats { position: relative; bottom: 0; right: 0; margin-top: 4rem; justify-content: center; }
+  #hero { padding: 8rem 1.5rem 4rem; }
+  .hero-buttons { flex-direction: column; width: 100%; gap: 1rem; }
+  .btn-primary-tactical, .btn-secondary-tactical { width: 100%; justify-content: center; }
 }

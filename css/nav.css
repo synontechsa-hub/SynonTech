@@ -1,6 +1,5 @@
 /* ============================================================
-   synontech — navigation
-   Top nav bar, logo, links, CTA, mobile hamburger.
+   Synontech — Navigation
    ============================================================ */
 
 nav {
@@ -11,9 +10,10 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3rem;
-  background: rgba(5, 5, 5, 0.9);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(252, 238, 10, 0.15);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border-gray);
+  transition: all 0.3s ease;
 }
 
 .nav-logo {
@@ -23,13 +23,13 @@ nav {
 }
 
 .nav-logo-img {
-  height: 28px; /* 25% Increase for better brand presence */
+  height: 28px;
   width: auto;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .nav-logo:hover .nav-logo-img {
-  filter: drop-shadow(0 0 12px var(--neon-yellow));
+  opacity: 0.8;
 }
 
 .nav-links {
@@ -39,58 +39,43 @@ nav {
 }
 
 .nav-links a {
-  color: var(--text-dim);
+  color: var(--color-text-gray);
   text-decoration: none;
-  font-family: 'Share Tech Mono', monospace;
-  font-weight: 400;
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: var(--neon-yellow);
-  text-shadow: 0 0 12px rgba(252, 238, 10, 0.8);
+  color: var(--color-deep-navy);
 }
 
 .nav-cta {
-  font-family: 'Orbitron', monospace;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  color: #000;
-  background: var(--neon-yellow);
-  padding: 0.5rem 1.4rem;
+  background: var(--color-deep-navy);
+  color: var(--color-white);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-md);
   text-decoration: none;
-  transition: all 0.2s;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 100%, 0 100%);
-  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .nav-cta:hover {
-  transform: translate(2px, -2px);
-  box-shadow: var(--glow-yellow);
+  background: var(--primary);
+  transform: translateY(-1px);
 }
 
 /* ── Hamburger (mobile only) ── */
 .nav-hamburger {
   display: none;
   background: transparent;
-  border: 1px solid var(--neon-yellow);
-  color: var(--neon-yellow);
-  font-size: 1.2rem;
-  line-height: 1;
-  padding: 0.35rem 0.65rem;
+  border: none;
+  color: var(--color-deep-navy);
+  font-size: 1.5rem;
   cursor: pointer;
-  clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
-  transition: background 0.2s, box-shadow 0.2s;
-}
-
-.nav-hamburger:hover {
-  background: rgba(252, 238, 10, 0.08);
-  box-shadow: var(--glow-yellow);
 }
 
 .nav-links li.mobile-only {
@@ -116,9 +101,12 @@ nav {
     width: 100%;
     flex-direction: column;
     gap: 0;
-    padding: 0.5rem 0 0.75rem;
-    border-top: 1px solid rgba(252, 238, 10, 0.1);
-    order: 3;
+    padding: 1rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border-gray);
   }
 
   .nav-links li.mobile-only {
@@ -131,6 +119,6 @@ nav {
 
   .nav-links li a {
     display: block;
-    padding: 0.8rem 0;
+    padding: 0.8rem 1.5rem;
   }
 }

@@ -1,6 +1,6 @@
 /* ============================================================
    synontech — base
-   Reset, body, ambient effects, shared section styles, divider.
+   Reset, body, typography, shared utilities
    ============================================================ */
 
 *, *::before, *::after {
@@ -15,48 +15,13 @@ html {
 
 body {
   background-color: var(--bg-main);
-  background-image: linear-gradient(rgba(2, 11, 24, 0.85), rgba(2, 11, 24, 0.95)), url('../assets/backgrounds/nCZX7Wy4do1kuJV8mgvl--0--Dleii.webp');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
   color: var(--text-main);
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-primary);
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
-}
-
-/* ── Star Field (The 'Dull' foundation) ── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    radial-gradient(1px 1px at 10%  15%, rgba(255,255,255,0.2) 0%, transparent 100%),
-    radial-gradient(1px 1px at 30%  45%, rgba(255,255,255,0.1) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 50%  20%, rgba(252, 238, 10, 0.1) 0%, transparent 100%),
-    radial-gradient(1px 1px at 70%  60%, rgba(255,255,255,0.1) 0%, transparent 100%),
-    radial-gradient(1px 1px at 85%  30%, rgba(252, 238, 10, 0.1) 0%, transparent 100%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* ── Scanlines & Noise (The 'Gritty' layer) ── */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, 0.15) 2px,
-      rgba(0, 0, 0, 0.15) 4px
-    ),
-    radial-gradient(circle at center, transparent, rgba(0,0,0,0.4));
-  pointer-events: none;
-  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ── Sections ── */
@@ -77,23 +42,27 @@ section {
   margin: 0 auto;
 }
 
-/* ── Glass Panel HUD ── */
+/* ── Glass/Card Panel ── */
 .glass-panel {
-  background: rgba(10, 15, 25, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 255, 136, 0.15);
-  border-left: 2px solid var(--accent);
+  background: var(--bg-card);
+  border: var(--border-main);
+  border-radius: var(--radius-lg);
   padding: 2rem;
-  border-radius: 4px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glass-panel:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
 .section-tag {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.35em;
-  color: var(--accent);
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--primary);
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -101,132 +70,73 @@ section {
   text-transform: uppercase;
 }
 
-.section-tag::after {
-  content: '';
-  height: 1px;
-  width: 60px;
-  background: linear-gradient(90deg, var(--accent), transparent);
-  display: inline-block;
-}
-
-.kerfsuite-page .section-tag::after {
-  background: linear-gradient(90deg, var(--ks-orange), transparent);
-}
-
 .section-title {
-  font-family: 'Orbitron', monospace;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
-  line-height: 1.15;
-  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-deep-navy);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .section-title span {
   color: var(--primary);
-  text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 20px var(--primary);
-  animation: neon-flicker 4s infinite alternate;
 }
 
-@keyframes neon-flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-    text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 20px var(--primary);
-  }
-  20%, 24%, 55% {
-    opacity: 0.4;
-    text-shadow: none;
-  }
+/* ── Typography Utilities ── */
+p {
+  color: var(--text-dim);
+  margin-bottom: 1rem;
 }
 
-/* ── Cyber Divider ── */
+/* ── Divider ── */
 .cyber-divider {
-  position: relative;
-  z-index: 2;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(252, 238, 10, 0.2) 30%,
-    rgba(252, 238, 10, 0.2) 50%,
-    rgba(255, 0, 85, 0.2) 70%,
-    transparent
-  );
-  margin: 0;
-}
-
-/* ── HUD Global Wrap ── */
-.global-hud-container {
-  position: fixed;
-  inset: 6.5rem 2rem 4rem; /* Large top margin to clear nav */
-  pointer-events: none;
-  z-index: 50; /* Below nav (z-100) */
-}
-
-.hud-frame {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border: 1px solid rgba(252, 238, 10, 0.2);
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.5rem;
-  color: var(--text-dim);
-  padding: 4px;
-  text-transform: uppercase;
-}
-
-.hud-frame.top-left { display: none; }
-.hud-frame.top-right { top: 0; right: 0; border-left: none; border-bottom: none; text-align: right; }
-.hud-frame.bottom-left { display: none; }
-.hud-frame.bottom-right { display: none; }
-
-.hud-frame.bottom-right::after {
-  content: '';
-  position: absolute;
-  bottom: 8px; right: 8px;
-  width: 15px; height: 15px;
-  background: var(--neon-yellow);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  opacity: 0.3;
-}
-
-.hud-label {
-  position: absolute;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.6rem;
-  color: var(--text-dim);
-  letter-spacing: 0.1em;
+  background: var(--color-border-gray);
+  margin: 0 auto;
+  max-width: 1100px;
   opacity: 0.6;
 }
 
-@media (max-width: 768px) {
-  .hud-frame { width: 40px; height: 40px; }
-  .hud-frame span { display: none; }
+/* ── Buttons ── */
+.btn-primary-tactical {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 
-/* ── Graffiti Decals ── */
-.graffiti-decal {
-  position: absolute;
-  z-index: 1; /* Below content, above background */
-  pointer-events: none;
-  mix-blend-mode: screen; /* Helps blend the black background of generated images */
-  opacity: 0.6;
-  filter: contrast(1.2) drop-shadow(0 0 10px rgba(255, 0, 85, 0.5));
+.btn-primary-tactical:hover {
+  background-color: var(--color-deep-navy);
+  transform: translateY(-1px);
 }
 
-.graffiti-1 {
-  top: 15%;
-  right: 5%;
-  width: 300px;
-  transform: rotate(15deg);
+.btn-secondary-tactical {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--text-main);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-gray);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
-.graffiti-2 {
-  top: 45%;
-  left: -5%;
-  width: 400px;
-  transform: rotate(-10deg);
-  filter: contrast(1.2) drop-shadow(0 0 10px rgba(252, 238, 10, 0.5));
+.btn-secondary-tactical:hover {
+  background-color: var(--color-border-gray);
+  color: var(--color-deep-navy);
 }

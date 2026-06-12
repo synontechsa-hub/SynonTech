@@ -1,43 +1,41 @@
 /* ============================================================
-   synontech — true cyberpunk identity
-   Inspired by the high-contrast "Night City" aesthetic.
+   Synontech Brand Identity System
+   Minimalist, professional, product-focused.
    ============================================================ */
 
 :root {
-  /* --- The "Night" (Vibrant Neons) --- */
-  --neon-yellow:  #fcee0a; /* Iconic CP2077 Yellow */
-  --neon-cyan:    #00f3ff; /* Electric Cyan */
-  --neon-pink:    #ff0055; /* High-intensity Pink */
-  --neon-blue:    #005eff; /* Deep Electric Blue */
-  --neon-green:   #00ff88; /* Matrix/HUD Green */
-  --neon-red:     #ff003c; /* Warning Red */
-  --neon-magenta: #ff00ff; /* Night City Magenta */
+  /* --- Primary Colors --- */
+  --color-deep-navy: #0F172A;
+  --color-charcoal: #111827;
 
-  /* --- The "Day" (Gritty Industrial) --- */
-  --black-void:   #050505;
-  --navy-deep:    #020b18;
-  --concrete:     #1a1a1a; /* Dull street grey */
-  --gunmetal:     #2d2d2d;
-  --steel:        #4f4f4f;
+  /* --- Secondary Colors --- */
+  --color-blue: #2563EB;
+  --color-emerald: #10B981;
 
-  /* --- Functional Assignments --- */
-  --primary:      var(--neon-yellow);
-  --secondary:    var(--neon-red);
-  --accent:       var(--neon-magenta);
+  /* --- Neutral Colors --- */
+  --color-white: #FFFFFF;
+  --color-light-gray: #F8FAFC;
+  --color-border-gray: #E5E7EB;
+  --color-text-gray: #64748B;
 
-  --bg-main:      var(--black-void);
-  --bg-card:      rgba(20, 20, 20, 0.9);
-  --text-main:    #e0e0e0;
-  --text-dim:     #888888;
+  /* --- Functional Assignments (Light Theme) --- */
+  --bg-main: var(--color-light-gray);
+  --bg-card: var(--color-white);
+  --text-main: var(--color-charcoal);
+  --text-dim: var(--color-text-gray);
 
-  /* --- Glows & FX --- */
-  --glow-cyan:   0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.2);
-  --glow-pink:   0 0 10px rgba(255, 0, 85, 0.5), 0 0 20px rgba(255, 0, 85, 0.2);
-  --glow-yellow: 0 0 15px rgba(252, 238, 10, 0.4);
-  --glow-red:    0 0 10px rgba(255, 0, 60, 0.5), 0 0 20px rgba(255, 0, 60, 0.2);
-  --glow-magenta: 0 0 15px rgba(255, 0, 255, 0.5);
+  --primary: var(--color-blue);
+  --accent: var(--color-emerald);
 
-  /* --- Borders --- */
-  --border-main: 1px solid rgba(255, 255, 255, 0.1);
-  --border-neon: 1px solid var(--primary);
+  /* --- UI Elements --- */
+  --border-main: 1px solid var(--color-border-gray);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* --- Typography --- */
+  --font-primary: 'Inter', sans-serif;
 }
+

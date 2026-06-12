@@ -1,213 +1,43 @@
 /* ============================================================
-   synontech — about
-   About section, two-column grid, metrics box, skill tags.
+   Synontech — About
    ============================================================ */
 
 #about {
-  background: linear-gradient(180deg, transparent, rgba(26, 26, 26, 0.4) 50%, transparent);
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border-gray);
+  border-bottom: 1px solid var(--color-border-gray);
 }
 
 /* ── Grid layout ── */
 .about-grid {
   display: flex;
-  flex-direction: row;
-  gap: 4rem;
-  align-items: center;
-  margin-top: 3rem;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* Ensure boxes and text share space reasonably */
 .about-text {
-  flex: 1.2;
+  max-width: 800px;
 }
 
-.about-visual {
-  flex: 1;
-  position: relative;
-  min-width: 300px;
-}
-
-/* ── Mobile Overhaul ── */
-@media (max-width: 992px) {
-  .about-grid {
-    flex-direction: column;
-    gap: 3rem;
-    text-align: center;
-  }
-
-  .about-grid.creator-grid {
-    flex-direction: column-reverse; /* Put identity box above text on mobile */
-  }
-
-  .about-text {
-    width: 100%;
-  }
-
-  .about-visual {
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
-  }
-
-  .about-skills {
-    justify-content: center;
-  }
-}
-
-/* ── Text column ── */
 .about-text p {
   color: var(--text-dim);
-  font-size: 1.05rem;
-  line-height: 1.75;
-  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
   font-weight: 400;
 }
 
-.about-text p strong {
-  color: var(--neon-yellow);
+.about-text p:last-child {
+  margin-bottom: 0;
   font-weight: 600;
+  color: var(--color-deep-navy);
 }
 
-.about-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
+/* ── Mobile ── */
+@media (max-width: 992px) {
+  .about-grid {
+    text-align: left;
+  }
 }
 
-.skill-tag {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: var(--text-dim);
-  border: 1px solid var(--steel);
-  padding: 0.3rem 0.8rem;
-  background: rgba(255, 255, 255, 0.02);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 8px 100%, 0 70%);
-  transition: all 0.3s ease;
-}
-
-.skill-tag:hover {
-  color: var(--neon-yellow);
-  border-color: var(--neon-yellow);
-  background: rgba(252, 238, 10, 0.05);
-}
-
-/* ── Visual column ── */
-.about-visual {
-  position: relative;
-}
-
-.about-box {
-  background: rgba(26, 26, 26, 0.9);
-  border: 1px solid var(--steel);
-  padding: 2rem;
-  position: relative;
-  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
-}
-
-.about-box::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 24px; height: 24px;
-  border-bottom: 1px solid var(--neon-yellow);
-  border-left: 1px solid var(--neon-yellow);
-  background: rgba(252, 238, 10, 0.2);
-}
-
-/* ── Metrics ── */
-.metric-row {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.metric-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.metric-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.metric-label {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  color: var(--text-dim);
-  text-transform: uppercase;
-}
-
-.metric-value {
-  font-family: 'Orbitron', monospace;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--neon-yellow);
-}
-
-/* ── Creator Section Overrides ── */
-.creator-grid {
-  align-items: center;
-}
-
-.creator-box {
-  border-color: var(--neon-pink);
-  background: rgba(255, 0, 85, 0.03);
-}
-
-.creator-box::before {
-  border-bottom-color: var(--neon-pink);
-  border-left-color: var(--neon-pink);
-  background: rgba(255, 0, 85, 0.15);
-}
-
-.creator-identity {
-  text-align: center;
-  padding: 2.5rem 0;
-}
-
-.creator-handle {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--neon-pink);
-  text-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.creator-name {
-  font-family: 'Share Tech Mono', sans-serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.4em;
-  color: var(--text-dim);
-  text-transform: uppercase;
-}
-
-.creator-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2.5rem;
-}
-
-.creator-btn {
-  border-color: var(--neon-pink);
-  color: var(--neon-pink);
-  font-weight: 700;
-}
-
-.creator-btn:hover {
-  background: rgba(255, 0, 85, 0.1);
-  box-shadow: var(--glow-pink);
-  color: var(--neon-pink);
-}

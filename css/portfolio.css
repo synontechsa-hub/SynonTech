@@ -1,10 +1,10 @@
 /* ============================================================
-   synontech — portfolio
-   Project card grid, card anatomy, colour variants.
+   Synontech — Products
    ============================================================ */
 
-#portfolio {
+#products {
   padding-bottom: 5rem;
+  background: var(--color-light-gray);
 }
 
 .portfolio-header {
@@ -18,239 +18,52 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Reduced from 280px for mobile safety */
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-/* ── Card base (High-Fidelity Pass) ── */
+/* ── Product Card ── */
 .project-card {
-  background: #000;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.project-card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-8px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-}
-
-.card-banner {
-  height: 140px; /* Mini-banner area */
-  width: 100%;
-  position: relative;
-  background: #0a0a0a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
 .card-body {
-  padding: 1.75rem;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-}
-
-.card-title {
-  font-family: 'Orbitron', monospace;
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: 0.5rem;
+  flex-grow: 1;
 }
 
 .card-type {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  color: var(--neon-yellow);
-  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-deep-navy);
+  margin-bottom: 1rem;
 }
 
 .card-desc {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-dim);
   line-height: 1.6;
   margin-bottom: 2rem;
+  flex-grow: 1;
 }
 
 .card-footer {
   margin-top: auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 1.25rem;
-}
-
-/* Safety Orange (KerfSuite) */
-.card--teal:hover { box-shadow: 0 0 30px rgba(255, 102, 0, 0.4); border-color: rgba(255, 102, 0, 0.6); }
-.card--teal .card-type { color: #FF6600; }
-.card--teal .card-banner::after { border-color: #FF6600; box-shadow: inset 0 0 10px rgba(255, 102, 0, 0.2); }
-.card--teal .card-banner { background: #0a0a0a !important; }
-
-/* Safety Red (SynQuest / Malevolent) */
-.card--pink:hover { box-shadow: 0 0 30px rgba(255, 51, 51, 0.4); border-color: rgba(255, 51, 51, 0.6); }
-.card--pink .card-type { color: #FF3333; }
-.card--pink .card-banner::after { border-color: #FF3333; box-shadow: inset 0 0 10px rgba(255, 51, 51, 0.2); }
-.card--pink .card-banner { background: #0a0a0a !important; }
-
-/* Gold (SynConvert) */
-.card--gold:hover { box-shadow: 0 0 30px rgba(252, 238, 10, 0.1); border-color: rgba(252, 238, 10, 0.3); }
-
-/* Purple (MKVoodoo) */
-.card--purple:hover { box-shadow: 0 0 30px rgba(168, 60, 255, 0.4); border-color: rgba(168, 60, 255, 0.6); }
-.card--purple .card-banner { background: #0a0a0a !important; }
-
-
-/* ── Featured "Series 2" Card ── */
-.card--featured {
-  grid-column: 1 / -1; /* Take full width for the flagship look */
-  background: #000;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 40px rgba(0, 255, 136, 0.05);
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  align-items: center;
-  min-height: 400px;
-}
-
-.card--featured .card-banner {
-  height: 100%;
-  position: relative;
-  background: radial-gradient(circle at center, #111, #000);
+  border-top: 1px solid var(--color-border-gray);
+  padding-top: 1.5rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
-/* The Intense Plasma Glow Frame */
-.card--featured .card-banner::after {
-  content: '';
-  position: absolute;
-  width: 80%;
-  height: 60%;
-  border: 2px solid var(--neon-yellow);
-  box-shadow:
-    0 0 20px var(--neon-yellow),
-    inset 0 0 20px var(--neon-yellow),
-    0 0 40px var(--neon-pink);
-  opacity: 0.8;
-  filter: blur(1px);
-  animation: plasma 4s infinite alternate;
-}
-
-@keyframes plasma {
-  0% { transform: scale(1); filter: hue-rotate(0deg) blur(1px); }
-  100% { transform: scale(1.02); filter: hue-rotate(45deg) blur(2px); }
-}
-
-.card--featured .card-body {
-  padding: 3rem;
-  position: relative;
-}
-
-.card--featured .card-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* Metadata Pill */
-.status-pill {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: var(--neon-yellow);
-  color: #000;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.6rem;
-  padding: 4px 12px;
-  border-radius: 20px;
-  letter-spacing: 0.1em;
-  z-index: 10;
-}
-
-/* The Creator Hallmark Card */
-.creator-hallmark {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 120px;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-}
-
-.hallmark-icon {
-  height: 15px;
-  margin-bottom: 5px;
-  filter: brightness(0) invert(1);
-}
-
-.hallmark-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.45rem;
-  color: var(--text-dim);
-  text-align: center;
-}
-
-/* Responsive fix for featured card */
-@media (max-width: 992px) {
-  .card--featured {
-    grid-template-columns: 1fr;
-  }
-  .card--featured .card-banner {
-    height: 300px;
-  }
-}
-
-/* Yellow/Gold (Linker.AI / Featured) */
-.card--cyan .card-banner  { background: var(--neon-yellow); }
-.card--cyan .card-type    { color: var(--neon-yellow); }
-.card--cyan .card-type::before { background: var(--neon-yellow); box-shadow: 0 0 8px var(--neon-yellow); }
-.card--cyan .tag:hover    { color: var(--neon-yellow); border-color: var(--neon-yellow); background: rgba(252, 238, 10, 0.05); }
-.card--cyan .card-link    { color: var(--neon-yellow); }
-.card--cyan .status-dot   { background: var(--neon-yellow); box-shadow: 0 0 8px var(--neon-yellow); }
-.card--cyan .card-status  { color: var(--neon-yellow); }
-
-/* Pink (SynQuest) */
-.card--pink .card-type    { color: #FF3333; }
-.card--pink .card-type::before { background: #FF3333; box-shadow: 0 0 8px #FF3333; }
-.card--pink .tag:hover    { color: #FF3333; border-color: #FF3333; background: rgba(255, 51, 51, 0.05); }
-.card--pink .card-link    { color: #FF3333; }
-.card--pink .status-dot   { background: #FF3333; box-shadow: 0 0 8px #FF3333; }
-.card--pink .card-status  { color: #FF3333; }
-
-/* Gold (SynConvert) */
-.card--gold .card-type    { color: var(--neon-yellow); }
-.card--gold .card-type::before { background: var(--neon-yellow); box-shadow: 0 0 8px var(--neon-yellow); }
-.card--gold .tag:hover    { color: var(--neon-yellow); border-color: var(--neon-yellow); background: rgba(252, 238, 10, 0.05); }
-.card--gold .card-link    { color: var(--neon-yellow); }
-.card--gold .status-dot   { background: var(--neon-yellow); box-shadow: 0 0 8px var(--neon-yellow); }
-.card--gold .card-status  { color: var(--neon-yellow); }
-
-/* Red/Secondary (KerfCut) */
-.card--teal .card-type    { color: #FF6600; }
-.card--teal .card-type::before { background: #FF6600; box-shadow: 0 0 8px #FF6600; }
-.card--teal .tag:hover    { color: #FF6600; border-color: #FF6600; background: rgba(255, 102, 0, 0.05); }
-.card--teal .card-link    { color: #FF6600; }
-.card--teal .status-dot   { background: var(--steel); animation: none; }
-.card--teal .card-status  { color: var(--text-dim); }
-
-/* Purple (MKVoodoo) */
-.card--purple .card-type    { color: #ef4dff; }
-.card--purple .card-type::before { background: #ef4dff; box-shadow: 0 0 8px #ef4dff; }
-.card--purple .tag:hover    { color: #ef4dff; border-color: #ef4dff; background: rgba(239, 77, 255, 0.05); }
-.card--purple .card-link    { color: #ef4dff; }
-.card--purple .status-dot   { background: #ef4dff; box-shadow: 0 0 8px #ef4dff; }
-.card--purple .card-status  { color: #ef4dff; }

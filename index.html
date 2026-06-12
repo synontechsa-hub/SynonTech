@@ -57,9 +57,9 @@
   <link rel="icon" type="image/png" href="assets/synontech_favicon.png">
 
   <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles (order matters — variables must load first) -->
   <link rel="stylesheet" href="css/variables.css">
@@ -75,33 +75,23 @@
 
 <body>
 
-  <!-- Global HUD Overlay -->
-  <div class="global-hud-container">
-    <div class="hud-frame top-right"><span id="user-coords">S 26.2041<br>E 28.0473</span></div>
-  </div>
 
-  <!-- Graffiti Decals -->
-  <img src="assets/graffiti_pink.png" alt="" class="graffiti-decal graffiti-1">
-  <img src="assets/graffiti_yellow.png" alt="" class="graffiti-decal graffiti-2">
   <!-- ══════════════════════════════════════════════
      NAV
 ═══════════════════════════════════════════════ -->
   <nav>
     <a href="#hero" class="nav-logo">
-      <img src="assets/synontech_dark_background.png" alt="synontech" class="nav-logo-img">
+      <img src="assets/Synontech/Synontech_dark.svg" alt="synontech" class="nav-logo-img">
     </a>
 
     <ul class="nav-links" id="nav-links">
-      <li><a href="#about">about</a></li>
-      <li><a href="#creator">the creator</a></li>
-      <li><a href="#portfolio">studio projects</a></li>
-      <li><a href="future.html">upcoming</a></li>
-      <li><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener"
-          style="color: var(--neon-pink);">support</a></li>
-      <li class="mobile-only"><a href="#" class="contact-link">contact</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="future.html">Future</a></li>
+      <li class="mobile-only"><a href="#" class="contact-link">Contact</a></li>
     </ul>
 
-    <a href="#" class="nav-cta contact-link">contact</a>
+    <a href="#" class="nav-cta contact-link">Contact</a>
 
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </nav>
@@ -110,59 +100,19 @@
      HERO (TACTICAL HUD VERSION)
 ═══════════════════════════════════════════════ -->
   <section id="hero">
-    <div class="hero-grid-bg"></div>
-    <div class="hero-data-stream"></div>
-
-    <div class="hero-labels">
-      <div class="hud-label top-center">[SYSTEM_ACTIVE] INDEPENDENT DIGITAL STUDIO // EST. 2024</div>
-      <div class="hud-label top-left-inner">[8x7A_02]</div>
-    </div>
-
     <div class="hero-content">
-      <p class="hero-eyebrow">&lt;CMD_RUN_FUTURE_STATE&gt;<br>&lt;STATUS_ACTIVE&gt;</p>
-
-      <h1 class="hero-title" data-text="CODE THE FUTURE. BREAK THE LIMITS.">
-        <span class="line1">CODE THE FUTURE.</span>
-        <span class="line2">BREAK THE LIMITS.</span>
+      <p class="hero-eyebrow">Synontech</p>
+      <h1 class="hero-title">
+        <span class="line1">Software built</span>
+        <span class="line2">with purpose.</span>
       </h1>
-
-      <div class="hero-middle-row">
-        <div class="hero-desc-block glass-panel" style="padding: 1.5rem;">
-          <p class="hero-sub">Games, apps, and AI experiences crafted at the intersection of vision and code. From immersive simulations to lean digital utilities, every project is built with an obsessive focus on precision, autonomy, and absolute privacy. One developer. No compromises.</p>
-          <p class="hero-manifesto">VISION. CODE. / NO COMPROMISES.</p>
-        </div>
-
-        <div class="hero-video-container">
-          <div class="video-frame">
-            <video autoplay loop muted playsinline class="hero-video">
-              <source src="assets/hero_animation/hero_animation.mp4" type="video/mp4">
-            </video>
-            <div class="video-overlay"></div>
-            <div class="video-brackets"></div>
-          </div>
-        </div>
-      </div>
-
+      <p class="hero-sub">Tools for creators, professionals, and growing businesses.</p>
+      
       <div class="hero-buttons">
-        <div class="tactical-btn-wrapper">
-          <div class="btn-module-tab">SECURE_ACCESS_42</div>
-          <a href="#portfolio" class="btn-primary-tactical">
-            <span class="btn-text">View projects</span>
-            <div class="btn-progress-bar">
-              <div class="fill"></div>
-            </div>
-            <span class="btn-status">98%</span>
-          </a>
-          <div class="btn-wires"></div>
-        </div>
-
-        <div class="init-wrapper">
-          <span class="init-tag">INIT ></span>
-          <a href="#about" class="btn-secondary-tactical">About synontech</a>
-        </div>
+        <a href="#products" class="btn-primary-tactical">View Products</a>
+        <a href="#about" class="btn-secondary-tactical">About Synontech</a>
       </div>
     </div>
-
   </section>
 
   <div class="cyber-divider"></div>
@@ -172,51 +122,15 @@
 ═══════════════════════════════════════════════ -->
   <section id="about">
     <div class="section-inner">
-      <p class="section-tag reveal">Transmission_01</p>
-      <h2 class="section-title reveal">About <span>synontech</span></h2>
+      <p class="section-tag reveal">About</p>
+      <h2 class="section-title reveal">Software that <span>works</span></h2>
 
       <div class="about-grid">
         <div class="about-text reveal glass-panel">
-          <p>Synontech is a solo digital studio built on the principle that size doesn't determine
-            ambition. Operating across games, mobile apps, AI systems, and web platforms, every product is
-            built with the same obsessive attention to craft.</p>
-          <p>From immersive cyberpunk simulations with AI-driven characters to lean productivity tools
-            that solve real problems, synontech operates at the bleeding edge of what one person can build.</p>
-          <p>No committees. No compromise. Just fast iteration, clean code, and experiences that
-            actually ship.</p>
-          <div class="about-skills">
-            <span class="skill-tag">game dev</span>
-            <span class="skill-tag">mobile apps</span>
-            <span class="skill-tag">ai / llm</span>
-            <span class="skill-tag">web dev</span>
-            <span class="skill-tag">ui/ux</span>
-            <span class="skill-tag">simulation</span>
-            <span class="skill-tag">mud / rpg</span>
-          </div>
-        </div>
-
-        <div class="about-visual reveal reveal-delay-2">
-          <div class="about-box">
-            <div class="metric-row">
-              <div class="metric-item">
-                <span class="metric-label">studio type</span>
-                <span class="metric-value">solo dev</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-label">primary stack</span>
-                <span class="metric-value">multi-platform</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-label">speciality</span>
-                <span class="metric-value">ai + games</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-label">status</span>
-                <span class="metric-value"
-                  style="color: #00ff88; text-shadow: 0 0 12px rgba(0, 255, 136, 0.5);">active</span>
-              </div>
-            </div>
-          </div>
+          <p>Synontech is an independent software company focused on building practical tools for real people.</p>
+          <p>No hype.</p>
+          <p>No unnecessary complexity.</p>
+          <p>Just software that works.</p>
         </div>
       </div>
     </div>
@@ -224,141 +138,51 @@
 
   <div class="cyber-divider"></div>
 
-  <!-- ══════════════════════════════════════════════
-     MEET THE CREATOR
-═══════════════════════════════════════════════ -->
-  <section id="creator" style="background-image: linear-gradient(rgba(2, 11, 24, 0.7), rgba(2, 11, 24, 0.95)), url('assets/backgrounds/341b473e-d082-44b3-a7e9-deedba5552ca.png'); background-size: cover; background-position: center; border-top: 1px solid rgba(255, 0, 85, 0.2); border-bottom: 1px solid rgba(255, 0, 85, 0.2);">
-    <div class="section-inner">
-      <p class="section-tag reveal">Identity_02</p>
-      <h2 class="section-title reveal">The <span>creator</span></h2>
 
-      <div class="about-grid creator-grid">
-        <div class="about-visual reveal">
-          <div class="about-box creator-box">
-            <div class="creator-identity">
-              <div class="creator-handle">Synonimity</div>
-              <div class="creator-name">Bruce Gordon</div>
-            </div>
-          </div>
-        </div>
 
-        <div class="about-text reveal reveal-delay-1 glass-panel">
-          <p>Behind the code is a designer and engineer with over 20 years of experience translating complex visions
-            into precision execution. From industrial G-code for zero-defect production to high-fidelity software
-            architecture, Bruce's work is defined by rigor and aesthetic clarity.</p>
-          <p>synontech is the culmination of that journey—a space where industrial precision meets the limitless
-            potential of AI and game design.</p>
-          <div class="creator-actions">
-            <a href="https://synonimity.vercel.app/" target="_blank" rel="noopener"
-              class="btn-secondary creator-btn">View Synonimity &rarr;</a>
-            <a href="https://bruce-gordon.vercel.app/" target="_blank" rel="noopener"
-              class="btn-secondary creator-btn">View Bruce Gordon &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="cyber-divider"></div>
-
-  <section id="portfolio">
+  <section id="products">
     <div class="section-inner">
       <div class="portfolio-header">
         <div>
-          <p class="section-tag reveal">Transmission_03</p>
-          <h2 class="section-title reveal">Studio <span>projects</span></h2>
+          <p class="section-tag reveal">Products</p>
+          <h2 class="section-title reveal">Our <span>Software</span></h2>
         </div>
       </div>
 
       <div class="portfolio-grid">
-
-        <!-- Linker.AI (Featured Series 2 Card) -->
-        <article class="project-card card--featured reveal reveal-delay-1">
-          <div class="status-pill">ACTIVE DEV // VER 1.0.4</div>
-
-          <div class="card-banner">
-            <img src="assets/Linker_logo_dark_backgrounds.png" alt="Linker.AI"
-              style="width: 70%; position: relative; z-index: 5;">
-          </div>
-
-          <div class="card-body">
-            <p class="card-type" style="color: var(--neon-yellow);">simulation • ai • game • llm</p>
-            <h3 class="card-title">Linker.AI</h3>
-            <p class="card-desc">A spatial simulation game set in a neon-soaked cyberpunk city. Features ai-powered
-              roleplay chat with dynamic npcs that remember, react, and evolve. Live in a world that breathes.</p>
-
-            <div class="card-footer" style="border-top: none; padding-top: 0;">
-              <div style="display:flex; gap: 1rem;">
-                <a href="https://synontech.itch.io/linkerai" target="_blank" rel="noopener" class="btn-primary-tactical"
-                  style="padding: 0.8rem 1.5rem; font-size: 0.7rem;">
-                  <span class="btn-text">PLAY ON ITCH.IO</span>
-                </a>
-                <a href="linkerai.html" class="btn-secondary-tactical"
-                  style="padding: 0.8rem 1.5rem; font-size: 0.7rem;">LEARN MORE</a>
-              </div>
-            </div>
-
-            <div class="creator-hallmark">
-              <img src="assets/Linker_chain_logo_dark_background.png" alt="" class="hallmark-icon">
-              <div class="hallmark-text">LINKER.AI<br>CREATOR</div>
-            </div>
-          </div>
-        </article>
-
+        
         <!-- KerfSuite -->
-        <article class="project-card card--teal reveal reveal-delay-2">
-          <div class="card-banner">
-            <img src="assets/KerfSuite/KerfSuite%20-%20Without%20Background.png" alt="KerfSuite" style="width: 50%; position: relative; z-index: 5; filter: drop-shadow(0 0 15px rgba(255, 102, 0, 0.3));">
-          </div>
+        <article class="project-card glass-panel reveal reveal-delay-1">
           <div class="card-body">
-            <p class="card-type">productivity • mobile • utility • suite</p>
-            <h3 class="card-title">KerfSuite</h3>
+            <p class="card-type">Kerf Suite</p>
+            <h3 class="card-title">Professional business and productivity tools</h3>
             <p class="card-desc">A precision workshop ecosystem. Includes <strong>KerfCut</strong> for algorithmic cut optimization and <strong>KerfStock</strong> for real-time inventory and offcut management.</p>
             <div class="card-footer">
-              <a href="kerfcut.html" class="btn-secondary-tactical"
-                style="padding: 0.6rem 1.2rem; font-size: 0.65rem;">INITIALIZE SUITE &rarr;</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Malevolent: Scorned -->
-        <article class="project-card card--pink reveal reveal-delay-3">
-          <div class="card-banner">
-            <span
-              style="font-family: 'Share Tech Mono'; color: #FF3333; font-size: 0.7rem; letter-spacing: 0.2em;">STATE
-              // GRIMDARK</span>
-          </div>
-          <div class="card-body">
-            <p class="card-type">mud • rpg game • llm</p>
-            <h3 class="card-title">Malevolent: Scorned</h3>
-            <p class="card-desc">A grimdark MUD experience where text is the canvas. Dark lore, brutal choices, and a
-              persistent world shaped by every player action.</p>
-            <div class="card-footer">
-              <a href="synquest.html" class="btn-secondary-tactical"
-                style="padding: 0.6rem 1.2rem; font-size: 0.65rem;">ENTER THE VOID &rarr;</a>
+              <a href="kerfcut.html" class="btn-primary-tactical">Explore KerfSuite</a>
             </div>
           </div>
         </article>
 
         <!-- MKVoodoo -->
-        <article class="project-card card--purple reveal reveal-delay-4">
-          <div class="card-banner">
-            <img src="assets/MKVoodoo%20logo%20-%20Final%20-%20Dark%20Background.png" alt="MKVoodoo" style="width: 60%; position: relative; z-index: 5;">
-          </div>
+        <article class="project-card glass-panel reveal reveal-delay-2">
           <div class="card-body">
-            <p class="card-type">utility • desktop • video</p>
+            <p class="card-type">Syn Suite</p>
             <h3 class="card-title">MKVoodoo</h3>
-            <p class="card-desc">A local-first desktop video conversion cockpit. Scan messy folders, review smart names,
-              preserve tracks, and queue FFmpeg-powered batches without cloud handoffs.</p>
-            <div class="card-footer" style="border-top: none; padding-top: 0;">
-              <div style="display:flex; gap: 0.5rem; flex-wrap: wrap;">
-                <a href="https://github.com/synontechsa-hub/MKVoodoo/releases" target="_blank" rel="noopener" class="btn-primary-tactical"
-                  style="padding: 0.8rem 1.2rem; font-size: 0.7rem; flex: 1; text-align: center;">
-                  <span class="btn-text">DOWNLOAD</span>
-                </a>
-                <a href="mkvoodoo.html" class="btn-secondary-tactical"
-                  style="padding: 0.8rem 1.2rem; font-size: 0.7rem; flex: 1; text-align: center;">LEARN MORE</a>
-              </div>
+            <p class="card-desc">Everyday utilities and productivity applications. A local-first desktop video conversion cockpit. Scan messy folders, preserve tracks, and queue FFmpeg-powered batches.</p>
+            <div class="card-footer">
+              <a href="mkvoodoo.html" class="btn-primary-tactical">Explore MKVoodoo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Future Products -->
+        <article class="project-card glass-panel reveal reveal-delay-3">
+          <div class="card-body">
+            <p class="card-type">Future Products</p>
+            <h3 class="card-title">In Development</h3>
+            <p class="card-desc">Additional software solutions currently in development to simplify workflows and solve practical problems.</p>
+            <div class="card-footer">
+              <a href="future.html" class="btn-secondary-tactical">View Roadmap</a>
             </div>
           </div>
         </article>
@@ -374,20 +198,16 @@
 ═══════════════════════════════════════════════ -->
   <footer>
     <div class="footer-left">
-      <img src="assets/Powered_by_dark_background.png" alt="powered by synontech" class="footer-badge">
+      <img src="assets/Synontech/Powered_by_light_background.png" alt="powered by synontech" class="footer-badge">
     </div>
     <ul class="footer-links">
-      <li><a href="#about">about</a></li>
-      <li><a href="#creator">the creator</a></li>
-      <li><a href="#portfolio">studio projects</a></li>
-      <li><a href="future.html">upcoming</a></li>
-      <li><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener"
-          style="color: var(--neon-pink);">support</a></li>
-      <li><a href="#" class="contact-link">contact</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="future.html">Future</a></li>
+      <li><a href="#" class="contact-link">Contact</a></li>
     </ul>
     <div class="footer-copy">
-      <span>&copy; <span id="current-year">2026</span> synontech. all rights reserved.</span>
-      <span class="sys-status">SYS.ONLINE // 100%</span>
+      <span>&copy; <span id="current-year">2026</span> Synontech. All rights reserved.</span>
     </div>
   </footer>
 

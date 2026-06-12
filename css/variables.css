@@ -6,36 +6,41 @@
 :root {
   /* --- Primary Colors --- */
   --color-deep-navy: #0F172A;
-  --color-charcoal: #111827;
+  --color-charcoal:  #111827;
 
   /* --- Secondary Colors --- */
-  --color-blue: #2563EB;
-  --color-emerald: #10B981;
+  --color-blue:      #2563EB; /* Corporate Blue */
+  --color-emerald:   #10B981; /* Tech Green */
+  --color-orange:    #FF6600; /* Industrial Orange (KerfSuite) */
+  --color-violet:    #A83CFF; /* Creative Violet (Syn Suite) */
+  --color-pink:      #FF0055; /* Glitch Pink (Ecosystem) */
 
   /* --- Neutral Colors --- */
-  --color-white: #FFFFFF;
-  --color-light-gray: #F8FAFC;
+  --color-white:       #FFFFFF;
+  --color-light-gray:  #F8FAFC;
   --color-border-gray: #E5E7EB;
-  --color-text-gray: #64748B;
+  --color-text-gray:   #64748B;
 
   /* --- Functional Assignments (Light Theme) --- */
-  --bg-main: var(--color-light-gray);
-  --bg-card: var(--color-white);
+  --bg-main:   var(--color-light-gray);
+  --bg-card:   var(--color-white);
   --text-main: var(--color-charcoal);
-  --text-dim: var(--color-text-gray);
+  --text-dim:  var(--color-text-gray);
 
-  --primary: var(--color-blue);
-  --accent: var(--color-emerald);
+  /* --- Dynamic Variables (Overridable) --- */
+  --primary:   var(--color-blue);
+  --secondary: var(--color-orange);
+  --accent:    var(--color-emerald);
+  --extra:     var(--color-violet);
 
   /* --- UI Elements --- */
   --border-main: 1px solid var(--color-border-gray);
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --shadow-sm:   0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md:   0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:   0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --radius-md:   8px;
+  --radius-lg:   12px;
 
   /* --- Typography --- */
   --font-primary: 'Inter', sans-serif;
 }
-

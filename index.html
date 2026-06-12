@@ -92,9 +92,9 @@
       <li class="mobile-only"><a href="#" class="contact-link">Contact</a></li>
     </ul>
 
-    <div style="display: flex; gap: 1rem; align-items: center;" class="desktop-only">
-      <a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" class="nav-cta" style="background: transparent; color: var(--color-deep-navy); border: 1px solid var(--color-border-gray);">Support</a>
-      <a href="#" class="nav-cta contact-link">Contact</a>
+    <div class="nav-actions">
+      <a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" class="nav-cta btn-secondary-tactical" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">Support</a>
+      <a href="#" class="nav-cta contact-link btn-primary-tactical" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">Contact</a>
     </div>
 
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -112,14 +112,17 @@
       </h1>
       <p class="hero-sub">Tools for creators, professionals, and growing businesses.</p>
       
-      <div class="hero-buttons" style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-          <a href="https://byte-this-games.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical">Byte This Games</a>
-          <a href="https://synonimity.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical">Synonimity</a>
-          <a href="https://bruce-gordon.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical">Bruce Gordon</a>
+      <div class="hero-buttons-grid">
+        <!-- Studio ecosystem links -->
+        <div class="ecosystem-links">
+          <a href="https://byte-this-games.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--color-pink);">Byte This Games</a>
+          <a href="https://synonimity.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--color-blue);">Synonimity</a>
+          <a href="https://bruce-gordon.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--color-emerald);">Bruce Gordon</a>
         </div>
-        <div style="display: flex; gap: 1rem; justify-content: center;">
-          <a href="#products" class="btn-primary-tactical">View Products</a>
+
+        <!-- Primary actions -->
+        <div class="main-actions">
+          <a href="#products" class="btn-primary-tactical" style="--btn-bg: var(--color-orange);">View Products</a>
           <a href="#about" class="btn-secondary-tactical">About Synontech</a>
         </div>
       </div>
@@ -163,25 +166,25 @@
       <div class="portfolio-grid">
         
         <!-- KerfSuite -->
-        <article class="project-card glass-panel reveal reveal-delay-1">
+        <article class="project-card glass-panel reveal reveal-delay-1" style="--primary: var(--color-orange);">
           <div class="card-body">
             <p class="card-type">Kerf Suite</p>
             <h3 class="card-title">Professional business and productivity tools</h3>
             <p class="card-desc">A precision workshop ecosystem. Includes <strong>KerfCut</strong> for algorithmic cut optimization and <strong>KerfStock</strong> for real-time inventory and offcut management.</p>
             <div class="card-footer">
-              <a href="kerfcut.html" class="btn-primary-tactical">Explore KerfSuite</a>
+              <a href="kerfcut.html" class="btn-primary-tactical" style="--btn-bg: var(--color-orange);">Explore KerfSuite</a>
             </div>
           </div>
         </article>
 
         <!-- MKVoodoo -->
-        <article class="project-card glass-panel reveal reveal-delay-2">
+        <article class="project-card glass-panel reveal reveal-delay-2" style="--primary: var(--color-violet);">
           <div class="card-body">
             <p class="card-type">Syn Suite</p>
             <h3 class="card-title">MKVoodoo</h3>
             <p class="card-desc">Everyday utilities and productivity applications. A local-first desktop video conversion cockpit. Scan messy folders, preserve tracks, and queue FFmpeg-powered batches.</p>
             <div class="card-footer">
-              <a href="mkvoodoo.html" class="btn-primary-tactical">Explore MKVoodoo</a>
+              <a href="mkvoodoo.html" class="btn-primary-tactical" style="--btn-bg: var(--color-violet);">Explore MKVoodoo</a>
             </div>
           </div>
         </article>

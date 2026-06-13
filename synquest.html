@@ -43,16 +43,27 @@
   </div>
 
 <!-- ══════════════════════════════════════════════
-     NAV (Simplified for Project Page)
+     NAV
 ═══════════════════════════════════════════════ -->
-<nav style="justify-content: space-between; border-bottom: 1px solid rgba(255, 170, 0, 0.1);">
+<nav>
   <a href="index.html" class="nav-logo">
-    <img src="assets/synontech_dark_background.png" alt="synontech" class="nav-logo-img">
+    <img src="assets/Synontech/Synontech_dark.svg" alt="synontech" class="nav-logo-img" style="height: 32px;">
   </a>
-  <div class="synquest-nav-title">
-    Malevolent: Scorned
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="future.html">Future</a></li>
+    <li class="mobile-only"><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener">Support</a></li>
+    <li class="mobile-only"><a href="#" class="contact-link">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" class="nav-cta btn-secondary-tactical" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">Support</a>
+    <a href="#" class="nav-cta contact-link btn-primary-tactical" style="padding: 0.5rem 1.2rem; font-size: 0.8rem; --btn-bg: var(--color-blue);">Contact</a>
   </div>
-  <div style="width: 80px;"></div> <!-- Spacer for flex balance -->
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 </nav>
 
 <!-- ══════════════════════════════════════════════
@@ -174,17 +185,16 @@
 ═══════════════════════════════════════════════ -->
 <footer>
   <div class="footer-left">
-    <img src="assets/Powered_by_dark_background.png" alt="powered by synontech" class="footer-badge">
+    <img src="assets/Synontech/Powered_by_dark_background.png" alt="powered by synontech" class="footer-badge">
   </div>
-
-  <div class="footer-right">
-    <a href="https://github.com/synontechsa-hub" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://synontech.itch.io/" target="_blank" rel="noopener">itch.io</a>
-    <a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" style="color: var(--neon-pink);">Support</a>
-    <a href="#" class="contact-link">Contact</a>
-  </div>
+  <ul class="footer-links">
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="future.html">Future</a></li>
+    <li><a href="#" class="contact-link">Contact</a></li>
+  </ul>
   <div class="footer-copy">
-    <span>&copy; <span id="current-year">2026</span> synontech. all rights reserved.</span>
+    <span>&copy; <span id="current-year">2026</span> Synontech. All rights reserved.</span>
     <span class="sys-status">SYS.ONLINE // 100%</span>
   </div>
 </footer>

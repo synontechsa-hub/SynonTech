@@ -39,6 +39,17 @@
 }
 
 /* Typography Overrides */
+.kerfsuite-page .section-tag {
+  color: var(--ks-orange);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+
+.kerfsuite-page .section-title {
+  color: var(--ks-bg-dark);
+  font-family: 'Oswald', sans-serif !important;
+}
+
 .kerfsuite-page h1,
 .kerfsuite-page h2,
 .kerfsuite-page h3,
@@ -47,6 +58,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: var(--ks-text);
 }
 
 .ks-status,
@@ -215,12 +227,12 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
-  color: var(--ks-grey-light);
+  color: var(--ks-orange);
   padding: 1.2rem 1.8rem;
-  border: 1px solid var(--ks-grey-dark);
-  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--ks-bg-dark);
+  background: var(--ks-bg-black);
   letter-spacing: 0.1em;
   text-align: left;
   border-radius: 2px;
@@ -233,8 +245,8 @@
   gap: 0.8rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
-  color: var(--ks-grey-light);
-  border-bottom: 1px solid rgba(153, 153, 153, 0.1);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
   padding-bottom: 0.5rem;
 }
@@ -406,7 +418,7 @@
 }
 
 .ks-feature-desc {
-  color: var(--ks-text-dim);
+  color: var(--ks-text);
   line-height: 1.6;
 }
 
@@ -482,7 +494,11 @@
 
 .ks-pricing-card.coming-soon-card .ks-tier,
 .ks-pricing-card.coming-soon-card .ks-price {
-  color: var(--ks-grey-light);
+  color: var(--ks-bg-dark);
+}
+
+.ks-pricing-card.coming-soon-card .ks-price span {
+  color: var(--ks-text-dim);
 }
 
 .ks-pricing-card.coming-soon-card:hover {
@@ -494,11 +510,10 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--ks-grey-light);
-  border: 1px solid var(--ks-grey-dark);
+  background: var(--ks-bg-dark);
+  color: #fff;
   padding: 4px 8px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -537,7 +552,7 @@
   position: relative;
   padding: 0.8rem 0 0.8rem 1.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  color: var(--ks-text-dim);
+  color: var(--ks-text);
   font-size: 0.95rem;
 }
 
@@ -582,9 +597,11 @@
 }
 
 .ks-cta-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: var(--ks-text-light);
 }
 
 .ks-cta-title span {
@@ -594,7 +611,7 @@
 .ks-cta-desc {
   max-width: 600px;
   margin: 0 auto 3rem;
-  color: var(--ks-grey-light);
+  color: #999;
   font-size: 1.2rem;
 }
 

@@ -1,4 +1,4 @@
-# KerfCut PayPal Webhook & Resend Email Guide
+# KerfSuite PayPal Webhook & Resend Email Guide
 
 This guide contains the instructions, exact code, and prompt to wire up automated CDKey generation and email delivery in your Next.js **KerfPortal** application.
 
@@ -181,9 +181,9 @@ export async function POST(request: NextRequest) {
     const emailHtml = `
       <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 30px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #ffffff;">
         <div style="text-align: center; border-bottom: 2px solid #FF6600; padding-bottom: 20px; margin-bottom: 25px;">
-          <h1 style="color: #0f172a; margin: 0; font-size: 24px; letter-spacing: 1px;">KERFCUT // LICENSE ACTIVATION</h1>
+          <h1 style="color: #0f172a; margin: 0; font-size: 24px; letter-spacing: 1px;">KERFSUITE // LICENSE ACTIVATION</h1>
         </div>
-        <p style="font-size: 16px; color: #334155; line-height: 1.6;">Thank you for purchasing <strong>KerfCut</strong>!</p>
+        <p style="font-size: 16px; color: #334155; line-height: 1.6;">Thank you for purchasing <strong>KerfSuite</strong>!</p>
         <p style="font-size: 15px; color: #475569; line-height: 1.6;">Your professional workspace license key is generated and ready to bind:</p>
         
         <div style="background-color: #f8fafc; padding: 20px; border-radius: 6px; border: 1px dashed #cbd5e1; font-family: 'Courier New', Courier, monospace; font-size: 20px; font-weight: bold; letter-spacing: 2px; color: #FF6600; margin: 25px 0; text-align: center;">
@@ -215,7 +215,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         from: fromEmail,
         to: email,
-        subject: 'Your KerfCut License Key',
+        subject: 'Your KerfSuite License Key',
         html: emailHtml
       })
     });

@@ -4,7 +4,7 @@ copyright (c) 2026 syn / synonimity / synontech. all rights reserved.
 this license applies to all projects within the synontech ecosystem, including but
 not limited to:
   - project-soullink / Linker.AI
-  - KerfCut / syncad
+  - KerfSuite / syncad
   - workerpassport
   - legion
   - Malevolent: Scorned

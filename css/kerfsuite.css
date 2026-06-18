@@ -91,6 +91,24 @@
   background: rgba(255, 102, 0, 0.05);
 }
 
+.ks-nav-portal {
+  color: var(--ks-orange);
+  border: 1px solid var(--ks-orange);
+  padding: 0.4rem 1rem;
+  font-family: 'Share Tech Mono', monospace;
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.ks-nav-portal:hover {
+  background: rgba(255, 102, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+}
+
 /* ── HERO ── */
 #ks-hero {
   position: relative;

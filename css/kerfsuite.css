@@ -159,7 +159,6 @@
 .ks-hero-logo {
   width: min(90%, 550px); /* Significantly increased size */
   margin-bottom: 3rem;
-  filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.5));
 }
 
 .ks-tagline {

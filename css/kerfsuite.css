@@ -311,8 +311,15 @@
   background: var(--ks-orange);
 }
 
+.ks-app-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .ks-app-visual img {
-  width: 180px;
+  width: 216px; /* Increased 20% for professional presence */
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
 }
 

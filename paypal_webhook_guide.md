@@ -193,7 +193,7 @@ export async function POST(request: NextRequest) {
         <div style="background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; margin-bottom: 25px; border-radius: 4px;">
           <h3 style="color: #b45309; margin: 0 0 8px 0; font-size: 14px; text-transform: uppercase;">Activation Instructions:</h3>
           <ol style="margin: 0; padding-left: 20px; font-size: 14px; color: #78350f; line-height: 1.5;">
-            <li>Download the application build from <a href="https://github.com/synontechsa-hub/KerfSuite/releases" style="color: #FF6600; text-decoration: underline;">GitHub Releases</a>.</li>
+            <li>Download the application build from <a href="https://github.com/Feed-Rate/KerfSuite/releases/tag/v1.0.0-beta" style="color: #FF6600; text-decoration: underline;">GitHub Releases</a>.</li>
             <li>Launch the desktop app on your target workshop computer.</li>
             <li>Select "Activate License" on launch.</li>
             <li>Paste your CDKey into the field to bind the hardware slot.</li>

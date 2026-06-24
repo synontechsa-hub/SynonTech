@@ -6,12 +6,8 @@ viewBox="0 0 64 64"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2511998002432">
-   <rect fill="#333333" width="64.0012" height="64.0012"/>
-   <g>
-    <path fill="#999999" d="M4 16l6 0 0 32 -6 0 0 -32zm22 32l8 0 -15 -17 13 -15 -8 0 -13 15 15 17z"/>
-    <polygon fill="#FF6600" fill-rule="nonzero" points="40,48 40,48 40,22 29,22 34,16 60,16 60,22 46,22 47,48 "/>
-   </g>
-  </g>
+  <rect fill="#333333" width="64" height="64"/>
+  <path fill="#999999" d="M5 16l5 0 0 32 -5 0 0 -32zm21 32l7 0 -14 -17 13 -15 -8 0 -13 15 15 17z"/>
+  <path fill="#FF6600" fill-rule="nonzero" d="M28 39l0 -16 5 -7 1 0 25 0 0 6 -24 0c0,0 -1,0 -1,0 0,1 -1,1 -1,1l0 18c0,0 1,0 1,1 0,0 1,0 1,0l24 0 0 6 -24 0 -7 -9z"/>
  </g>
 </svg>

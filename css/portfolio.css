@@ -22,6 +22,14 @@
   gap: 2rem;
 }
 
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+
 /* ── Product Card ── */
 .project-card {
   display: flex;

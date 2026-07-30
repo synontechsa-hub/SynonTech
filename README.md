@@ -14,7 +14,7 @@ Welcome to the digital home of **synontech**, where we build tools that push the
 | :--- | :--- | :--- |
 | **🏎️ [SynConvert](https://github.com/synontechsa-hub/_Development/tree/main/synconvert)** | ultra-fast gpu-accelerated video conversion engine. | v1.0.4 turbo |
 | **🧠 [Linker.AI](https://github.com/synontechsa-hub/linker.ai)** | immersive spatial ai simulation with persistent digital souls. | active dev |
-| **📏 [KerfSuite](https://kerfsuite.vercel.app/)** | precision workshop productivity and sheet-cut optimization engine. | v1.0.0-Beta |
+| **📏 [KerfSuite](https://kerf-suite.com/)** | precision workshop productivity and sheet-cut optimization engine. | v1.0.0-Beta |
 
 ### 🏢 studio & workforce
 - **🆔 [workerpassport](https://github.com/synontechsa-hub/_Development/tree/main/workerpassport)**: digital identity and credential management for professional workforces.

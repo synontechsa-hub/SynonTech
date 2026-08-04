@@ -71,8 +71,17 @@
             Clean, convert, and queue your media locally. MKVoodoo turns messy video folders into tidy, mobile-ready files with smart naming, track control, and FFmpeg-powered batch processing.
           </p>
           <div class="mkv-ctas">
-            <a href="https://github.com/synontechsa-hub/MKVoodoo/releases" target="_blank" rel="noopener" class="mkv-btn-primary">Download Latest</a>
+            <a href="https://github.com/synontechsa-hub/MKVoodoo/releases" target="_blank" rel="noopener" class="mkv-btn-primary" id="mkv-download-btn">Download Latest</a>
             <a href="https://github.com/synontechsa-hub/MKVoodoo" target="_blank" rel="noopener" class="mkv-btn-secondary">GitHub Repo</a>
+          </div>
+
+          <div class="mkv-release-info reveal reveal-delay-3" id="latest-release" style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: none;">
+            <p style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--color-violet); text-transform: uppercase; letter-spacing: 0.05em;">
+                Latest Release: <span id="mkv-version" style="color: #fff; margin-left: 0.5rem;"></span>
+            </p>
+            <div id="mkv-changelog" style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.75rem; max-width: 500px; line-height: 1.5; font-family: 'Inter', sans-serif;">
+                <!-- Changelog will be injected here -->
+            </div>
           </div>
         </div>
 

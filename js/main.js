@@ -67,5 +67,47 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // ── MKVoodoo GitHub Release Sync ──────────────────────────
+    async function syncMKVoodooRelease() {
+        const versionEl = document.getElementById('mkv-version');
+        const changelogEl = document.getElementById('mkv-changelog');
+        const releaseInfo = document.getElementById('latest-release');
+        const downloadBtn = document.getElementById('mkv-download-btn');
+
+        if (!versionEl || !changelogEl) return;
+
+        try {
+            const response = await fetch('https://api.github.com/repos/synontechsa-hub/MKVoodoo/releases/latest');
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            const data = await response.json();
+
+            // Set Version
+            versionEl.textContent = data.tag_name;
+
+            // Set Changelog (first 300 chars or so, and handle newlines)
+            const body = data.body || 'No release notes provided.';
+            changelogEl.innerHTML = body.replace(/\r\n/g, '<br>').replace(/\n/g, '<br>');
+
+            // Update Download Button to point to specific asset if possible,
+            // otherwise keep it to the releases page.
+            // Usually we want the .exe for Windows.
+            const exeAsset = data.assets.find(asset => asset.name.endsWith('.exe'));
+            if (exeAsset) {
+                downloadBtn.href = exeAsset.browser_download_url;
+            }
+
+            // Show the info section
+            releaseInfo.style.display = 'block';
+            releaseInfo.classList.add('visible'); // Trigger reveal if observer missed it due to display:none
+
+        } catch (err) {
+            console.warn('GitHub release sync failed:', err);
+        }
+    }
+
+    if (document.body.classList.contains('mkvoodoo-page')) {
+        syncMKVoodooRelease();
+    }
 
 });

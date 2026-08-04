@@ -15,6 +15,10 @@ html {
 
 body {
   background-color: var(--bg-main);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
   color: var(--text-main);
   font-family: var(--font-primary);
   font-size: 16px;
@@ -79,7 +83,7 @@ section {
   font-family: var(--font-primary);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: var(--color-deep-navy);
+  color: var(--text-main);
   margin-bottom: 1.5rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -131,7 +135,7 @@ p {
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  color: var(--color-deep-navy);
+  color: var(--text-main);
   padding: 0.75rem 2rem;
   border-radius: var(--radius-md);
   border: 2px solid var(--color-border-gray);

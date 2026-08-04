@@ -67,6 +67,7 @@
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/hud.css">
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/portfolio.css">
   <link rel="stylesheet" href="css/future.css">
@@ -74,6 +75,14 @@
 </head>
 
 <body>
+
+  <!-- Global HUD Overlay -->
+  <div class="global-hud-container">
+    <div class="hud-frame top-left"><span>A.01-FRAME</span><span class="sys-readout">SYS.MAIN_01</span></div>
+    <div class="hud-frame top-right"><span id="user-coords">S 26.2041<br>E 28.0473</span><span class="sys-readout">LOC.HUB</span></div>
+    <div class="hud-frame bottom-left"><span>SECURE_LINK</span><span class="sys-readout">ACTIVE...</span></div>
+    <div class="hud-frame bottom-right"><span>100%_SYNC</span><span class="sys-readout">STABLE</span></div>
+  </div>
 
 
   <!-- ══════════════════════════════════════════════
@@ -104,26 +113,26 @@
      HERO (TACTICAL HUD VERSION)
 ═══════════════════════════════════════════════ -->
   <section id="hero">
-    <div class="hero-content">
-      <img src="assets/Synontech/Synontech.svg" alt="Synontech" class="hero-eyebrow-logo" style="height: 280px; margin-bottom: 0.5rem;">
+    <div class="hero-content reveal">
+      <img src="assets/Synontech/Synontech.svg" alt="Synontech" class="hero-eyebrow-logo" style="height: 240px; margin-bottom: 0rem;">
       <h1 class="hero-title">
-        <span class="line1">Software built</span>
-        <span class="line2">with purpose.</span>
+        STUDIO <br><span>MAINFRAME</span>
       </h1>
-      <p class="hero-sub">Tools for creators, professionals, and growing businesses.</p>
+      <p class="hero-sub">High-performance software engineering & industrial-grade simulations.</p>
       
       <div class="hero-buttons-grid">
         <!-- Studio ecosystem links -->
         <div class="ecosystem-links">
-          <a href="https://byte-this-games.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--color-pink);">Byte This Games</a>
-          <a href="https://synonimity.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--color-blue);">Synonimity</a>
-          <a href="https://bruce-gordon.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--color-emerald);">Bruce Gordon</a>
+          <a href="https://kerf-suite.com" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--sector-industrial);">Industrial</a>
+          <a href="linkerai.html" class="btn-primary-tactical" style="--btn-bg: var(--sector-simulation);">Simulations</a>
+          <a href="mkvoodoo.html" class="btn-primary-tactical" style="--btn-bg: var(--sector-utility);">Utilities</a>
+          <a href="https://byte-this-games.vercel.app/" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--sector-experimental);">Gaming</a>
         </div>
 
         <!-- Primary actions -->
         <div class="main-actions">
-          <a href="#products" class="btn-primary-tactical" style="--btn-bg: var(--color-orange);">View Products</a>
-          <a href="#about" class="btn-secondary-tactical">About Synontech</a>
+          <a href="#products" class="btn-primary-tactical" style="--btn-bg: var(--primary);">Access Products</a>
+          <a href="https://synonimity.vercel.app/" target="_blank" rel="noopener" class="btn-secondary-tactical">Creator Hub</a>
         </div>
       </div>
     </div>
@@ -166,37 +175,49 @@
       <div class="portfolio-grid">
         
         <!-- KerfSuite -->
-        <article class="project-card glass-panel reveal reveal-delay-1" style="--primary: var(--color-orange);">
+        <article class="project-card glass-panel reveal reveal-delay-1" style="--primary: var(--sector-industrial);">
           <div class="card-body">
-            <p class="card-type">Kerf Suite</p>
-            <h3 class="card-title">Professional business and productivity tools</h3>
-            <p class="card-desc">A precision workshop ecosystem. Includes <strong>KerfCut</strong> for algorithmic cut optimization and <strong>KerfStock</strong> for real-time inventory and offcut management.</p>
+            <p class="card-type">Sector 01 // Industrial</p>
+            <h3 class="card-title">Kerf Suite</h3>
+            <p class="card-desc">Professional precision tools. Includes <strong>KerfCut</strong> for algorithmic sheet-cut optimization and <strong>KerfStock</strong> for real-time inventory management.</p>
             <div class="card-footer">
-              <a href="https://kerf-suite.com" class="btn-primary-tactical" style="--btn-bg: var(--color-orange);">Explore KerfSuite</a>
+              <a href="https://kerf-suite.com" target="_blank" rel="noopener" class="btn-primary-tactical" style="--btn-bg: var(--sector-industrial);">Launch Production</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Linker.AI -->
+        <article class="project-card glass-panel reveal reveal-delay-2" style="--primary: var(--sector-simulation);">
+          <div class="card-body">
+            <p class="card-type">Sector 02 // Simulation</p>
+            <h3 class="card-title">Linker.AI</h3>
+            <p class="card-desc">A spatial simulation set in a neon-soaked cyberpunk metropolis. Every inhabitant is a living AI with persistent memory and unscripted roleplay.</p>
+            <div class="card-footer">
+              <a href="linkerai.html" class="btn-primary-tactical" style="--btn-bg: var(--sector-simulation);">Enter Simulation</a>
             </div>
           </div>
         </article>
 
         <!-- MKVoodoo -->
-        <article class="project-card glass-panel reveal reveal-delay-2" style="--primary: var(--color-violet);">
+        <article class="project-card glass-panel reveal reveal-delay-3" style="--primary: var(--sector-utility);">
           <div class="card-body">
-            <p class="card-type">Syn Suite</p>
+            <p class="card-type">Sector 03 // Utility</p>
             <h3 class="card-title">MKVoodoo</h3>
-            <p class="card-desc">Everyday utilities and productivity applications. A local-first desktop video conversion cockpit. Scan messy folders, preserve tracks, and queue FFmpeg-powered batches.</p>
+            <p class="card-desc">Local-first desktop video conversion cockpit. Batch clean, convert, and queue media files with full track control and FFmpeg orchestration.</p>
             <div class="card-footer">
-              <a href="mkvoodoo.html" class="btn-primary-tactical" style="--btn-bg: var(--color-violet);">Explore MKVoodoo</a>
+              <a href="mkvoodoo.html" class="btn-primary-tactical" style="--btn-bg: var(--sector-utility);">Deploy Utility</a>
             </div>
           </div>
         </article>
 
-        <!-- Future Products -->
-        <article class="project-card glass-panel reveal reveal-delay-3">
+        <!-- Malevolent -->
+        <article class="project-card glass-panel reveal reveal-delay-4" style="--primary: var(--sector-experimental);">
           <div class="card-body">
-            <p class="card-type">Future Products</p>
-            <h3 class="card-title">In Development</h3>
-            <p class="card-desc">Additional software solutions currently in development to simplify workflows and solve practical problems.</p>
+            <p class="card-type">Sector 04 // Experimental</p>
+            <h3 class="card-title">Malevolent: Scorned</h3>
+            <p class="card-desc">A grimdark MUD experience where text is the canvas. A living text-based RPG featuring an LLM-driven narrator and persistent world states.</p>
             <div class="card-footer">
-              <a href="future.html" class="btn-secondary-tactical">View Roadmap</a>
+              <a href="synquest.html" class="btn-primary-tactical" style="--btn-bg: var(--sector-experimental);">Initialize Ember</a>
             </div>
           </div>
         </article>

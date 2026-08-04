@@ -1,0 +1,76 @@
+/* ============================================================
+   synontech — HUD Overlay
+   Tactical UI elements for the studio mainframe
+   ============================================================ */
+
+.global-hud-container {
+  position: fixed;
+  inset: 6.5rem 2rem 4rem;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.hud-frame {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  padding: 6px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.hud-frame.top-left {
+  top: 0; left: 0;
+  border-right: none; border-bottom: none;
+}
+.hud-frame.top-right {
+  top: 0; right: 0;
+  border-left: none; border-bottom: none;
+  text-align: right;
+}
+.hud-frame.bottom-left {
+  bottom: 0; left: 0;
+  border-right: none; border-top: none;
+}
+.hud-frame.bottom-right {
+  bottom: 0; right: 0;
+  border-left: none; border-top: none;
+  text-align: right;
+}
+
+.hud-frame span {
+  display: block;
+  opacity: 0.5;
+  line-height: 1.2;
+}
+
+.hud-frame .sys-readout {
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.hud-frame.active {
+  border-color: var(--primary);
+  color: var(--color-white);
+}
+
+.hud-frame.active span {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .global-hud-container {
+    inset: 5.5rem 1rem 2rem;
+  }
+  .hud-frame {
+    width: 40px; height: 40px;
+    font-size: 0.5rem;
+  }
+  .hud-frame span { display: none; }
+}

@@ -18,14 +18,20 @@
   /* --- Neutral Colors --- */
   --color-white:       #FFFFFF;
   --color-light-gray:  #F8FAFC;
-  --color-border-gray: #E5E7EB;
-  --color-text-gray:   #64748B;
+  --color-border-gray: rgba(255, 255, 255, 0.1);
+  --color-text-gray:   #94A3B8;
 
-  /* --- Functional Assignments (Light Theme) --- */
-  --bg-main:   var(--color-light-gray);
-  --bg-card:   var(--color-white);
-  --text-main: var(--color-charcoal);
+  /* --- Functional Assignments (Dark Theme Mainframe) --- */
+  --bg-main:   var(--color-charcoal);
+  --bg-card:   rgba(15, 23, 42, 0.6);
+  --text-main: var(--color-light-gray);
   --text-dim:  var(--color-text-gray);
+
+  /* --- Operating Sectors --- */
+  --sector-industrial:   var(--color-orange);
+  --sector-simulation:   var(--color-pink);
+  --sector-utility:      var(--color-violet);
+  --sector-experimental: var(--color-blue);
 
   /* --- Dynamic Variables (Overridable) --- */
   --primary:   var(--color-blue);

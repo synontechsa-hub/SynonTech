@@ -23,6 +23,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
+    // ── HUD Dynamics ──────────────────────────────────────────
+    const hudFrames = document.querySelectorAll('.hud-frame');
+    const userCoords = document.getElementById('user-coords');
+
+    function updateHUD() {
+        hudFrames.forEach(frame => {
+            if (Math.random() > 0.95) {
+                frame.classList.add('active');
+                setTimeout(() => frame.classList.remove('active'), 100);
+            }
+        });
+
+        if (userCoords && Math.random() > 0.8) {
+            const lat = (26.2041 + (Math.random() - 0.5) * 0.01).toFixed(4);
+            const lng = (28.0473 + (Math.random() - 0.5) * 0.01).toFixed(4);
+            userCoords.innerHTML = `S ${lat}<br>E ${lng}`;
+        }
+    }
+
+    setInterval(updateHUD, 2000);
+
+    // ── Typing Effect ─────────────────────────────────────────
+    function typeEffect(element, speed) {
+        const text = element.innerHTML;
+        element.innerHTML = '';
+        element.style.visibility = 'visible';
+
+        let i = 0;
+        const timer = setInterval(() => {
+            if (i < text.length) {
+                element.append(text.charAt(i));
+                i++;
+            } else {
+                clearInterval(timer);
+            }
+        }, speed);
+    }
+
+    const heroSub = document.querySelector('.hero-sub');
+    if (heroSub) {
+        heroSub.style.visibility = 'hidden';
+        setTimeout(() => typeEffect(heroSub, 30), 1000);
+    }
+
     // ── Mobile Hamburger ──────────────────────────────────────────
     const hamburger = document.getElementById('nav-hamburger');
     const navLinks  = document.getElementById('nav-links');

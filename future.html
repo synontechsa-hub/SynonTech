@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hud.css">
   <link rel="stylesheet" href="css/future.css">
   <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -44,10 +45,10 @@
 
   <!-- Global HUD Overlay -->
   <div class="global-hud-container">
-    <div class="hud-frame top-left"><span>A.01-FRAME</span></div>
-    <div class="hud-frame top-right"><span id="user-coords">S 26.2041<br>E 28.0473</span></div>
-    <div class="hud-frame bottom-left"><span>LOADING_STATE<br>SYN_TECH...</span></div>
-    <div class="hud-frame bottom-right"></div>
+    <div class="hud-frame top-left"><span>A.01-FRAME</span><span class="sys-readout">SYS.FUTURE_02</span></div>
+    <div class="hud-frame top-right"><span id="user-coords">S 26.2041<br>E 28.0473</span><span class="sys-readout">LOC.HUB</span></div>
+    <div class="hud-frame bottom-left"><span>SECURE_LINK</span><span class="sys-readout">ACTIVE...</span></div>
+    <div class="hud-frame bottom-right"><span>100%_SYNC</span><span class="sys-readout">STABLE</span></div>
   </div>
 
   <nav>
@@ -73,38 +74,38 @@
 
   <section id="future" style="padding-top: 10rem;">
     <div class="section-inner">
-      <p class="section-tag reveal">Transmission_04</p>
+      <p class="section-tag reveal">Studio_Pipeline</p>
       <h1 class="section-title reveal" style="font-size: 4rem;">On the <span>horizon</span></h1>
-      <p class="reveal" style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-top: 0.5rem; max-width: 600px;">
-        A glimpse into the neon streets of tomorrow. Ideas in the pipeline. Some close to reality, some still dreaming. The studio never stops building.
+      <p class="reveal" style="color: var(--text-dim); font-size: 1.1rem; margin-top: 0.5rem; max-width: 600px;">
+        A glimpse into the neon streets of tomorrow. Projects currently in the development pipeline.
       </p>
 
       <div class="billboard-container">
         
         <!-- SynOS Billboard -->
         <article class="neon-billboard reveal">
-          <span class="billboard-badge">Concept</span>
+          <span class="billboard-badge">Pipeline_01 // Concept</span>
           <h2 class="billboard-title">SynOS</h2>
-          <p class="billboard-desc">A browser-based simulated operating system experience — aesthetic, interactive, and weird in the best way.</p>
+          <p class="billboard-desc">A browser-based simulated operating system experience — aesthetic, interactive, and high-performance.</p>
         </article>
 
         <!-- NPC Engine Billboard -->
         <article class="neon-billboard billboard-pink reveal reveal-delay-1">
-          <span class="billboard-badge">Research</span>
+          <span class="billboard-badge">Pipeline_02 // Research</span>
           <h2 class="billboard-title">NPC Engine</h2>
-          <p class="billboard-desc">A standalone AI character engine powering persistent, memory-aware NPCs for any game environment.</p>
+          <p class="billboard-desc">A standalone AI character engine powering persistent, memory-aware NPCs for any environment.</p>
         </article>
 
         <!-- SynTools Suite Billboard -->
         <article class="neon-billboard billboard-magenta reveal reveal-delay-2">
-          <span class="billboard-badge">Planned</span>
+          <span class="billboard-badge">Pipeline_03 // Planned</span>
           <h2 class="billboard-title">SynTools Suite</h2>
-          <p class="billboard-desc">A family of micro-productivity apps that do one thing each — and do it perfectly.</p>
+          <p class="billboard-desc">A family of micro-productivity applications designed for high-efficiency solo workflows.</p>
         </article>
 
         <!-- Linker World Billboard -->
         <article class="neon-billboard billboard-red reveal reveal-delay-3">
-          <span class="billboard-badge">Dreaming</span>
+          <span class="billboard-badge">Pipeline_04 // Dreaming</span>
           <h2 class="billboard-title">Linker World</h2>
           <p class="billboard-desc">An expanded Linker universe — player-built districts, faction politics, and a living city that never sleeps.</p>
         </article>

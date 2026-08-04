@@ -5,7 +5,7 @@
 #hero {
   position: relative;
   z-index: 2;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
   text-align: center;
   padding: 8rem 10% 4rem;
   overflow: hidden;
-  background: var(--bg-main);
+  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.05), transparent 70%);
 }
 
 .hero-content {
@@ -38,12 +38,12 @@
 
 .hero-title {
   font-family: var(--font-primary);
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.5rem;
-  color: var(--color-deep-navy);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+  color: var(--text-main);
 }
 
 .hero-title .line1, .hero-title .line2 {
@@ -96,7 +96,7 @@
 .btn-secondary-tactical {
   display: inline-flex;
   background: transparent;
-  color: var(--color-deep-navy);
+  color: var(--text-main);
   padding: 1rem 2.5rem;
   border-radius: var(--radius-md);
   border: 2px solid var(--color-border-gray);
@@ -107,8 +107,8 @@
 }
 
 .btn-secondary-tactical:hover {
-  background: var(--color-border-gray);
-  border-color: var(--color-border-gray);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary);
 }
 
 /* ── Mobile ── */

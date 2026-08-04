@@ -4,7 +4,7 @@
 
 #products {
   padding-bottom: 5rem;
-  background: var(--color-light-gray);
+  background: var(--bg-main);
 }
 
 .portfolio-header {
@@ -56,8 +56,13 @@
   font-family: var(--font-primary);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-deep-navy);
+  color: var(--text-main);
   margin-bottom: 1rem;
+}
+
+.project-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .card-desc {

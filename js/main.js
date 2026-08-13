@@ -10,18 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEls.forEach(el => el.textContent = new Date().getFullYear());
 
     // ── Scroll Reveal ─────────────────────────────────────────────
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-
-    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      revealEls.forEach((el) => revealObserver.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('visible'));
+    }
 
     // ── HUD Dynamics ──────────────────────────────────────────
     const hudFrames = document.querySelectorAll('.hud-frame');
@@ -129,21 +134,23 @@ document.addEventListener('DOMContentLoaded', () => {
             // Set Version
             versionEl.textContent = data.tag_name;
 
-            // Set Changelog (first 300 chars or so, and handle newlines)
+            // GitHub release copy is remote content, so render it as text.
             const body = data.body || 'No release notes provided.';
-            changelogEl.innerHTML = body.replace(/\r\n/g, '<br>').replace(/\n/g, '<br>');
+            changelogEl.textContent = body.slice(0, 2400);
 
             // Update Download Button to point to specific asset if possible,
             // otherwise keep it to the releases page.
             // Usually we want the .exe for Windows.
-            const exeAsset = data.assets.find(asset => asset.name.endsWith('.exe'));
+            const exeAsset = Array.isArray(data.assets)
+              ? data.assets.find(asset => asset.name.toLowerCase().endsWith('.exe'))
+              : null;
             if (exeAsset) {
                 downloadBtn.href = exeAsset.browser_download_url;
             }
 
-            // Show the info section
-            releaseInfo.style.display = 'block';
-            releaseInfo.classList.add('visible'); // Trigger reveal if observer missed it due to display:none
+            if (releaseInfo) {
+                releaseInfo.classList.add('visible');
+            }
 
         } catch (err) {
             console.warn('GitHub release sync failed:', err);

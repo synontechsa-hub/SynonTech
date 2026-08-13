@@ -3,248 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MKVoodoo: a local-first desktop video conversion cockpit for batch MKV-friendly media cleanup, smart naming, track control, and FFmpeg queues.">
+  <meta name="description" content="MKVoodoo is a local-first Windows media workbench for downloading, converting, naming, and organising video files with FFmpeg-powered batch processing.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#090B12">
-  <link rel="canonical" href="https://synontech.github.io/mkvoodoo.html">
+  <meta name="theme-color" content="#0b0b11">
+  <link rel="canonical" href="https://synontech.vercel.app/mkvoodoo.html">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://synontech.github.io/mkvoodoo.html">
-  <meta property="og:title" content="MKVoodoo | synontech">
-  <meta property="og:description" content="Clean, convert, and queue your media locally with a private desktop video conversion cockpit.">
-  <meta property="og:image" content="https://synontech.github.io/assets/mkvoodoo_logo.png">
+  <meta property="og:url" content="https://synontech.vercel.app/mkvoodoo.html">
+  <meta property="og:title" content="MKVoodoo | Local media workbench">
+  <meta property="og:description" content="Download, clean, convert, and queue your media locally with a private Windows desktop utility.">
+  <meta property="og:image" content="https://synontech.vercel.app/assets/og-synontech.png">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://synontech.github.io/mkvoodoo.html">
-  <meta property="twitter:title" content="MKVoodoo | synontech">
-  <meta property="twitter:description" content="Batch video conversion with local control, smart naming, and FFmpeg-powered queues.">
-  <meta property="twitter:image" content="https://synontech.github.io/assets/mkvoodoo_logo.png">
-  <title>MKVoodoo | synontech</title>
-  <link rel="icon" type="image/png" href="assets/synontech_favicon.png">
-
+  <meta property="twitter:title" content="MKVoodoo | Local media workbench">
+  <meta property="twitter:description" content="FFmpeg-powered batch conversion, smart naming, and YouTube downloads—without uploading your media.">
+  <meta property="twitter:image" content="https://synontech.vercel.app/assets/og-synontech.png">
+  <title>MKVoodoo | Local media workbench</title>
+  <link rel="icon" type="image/png" href="assets/Synontech/Synontech Favicon - Dark Background.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/hud.css">
-  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/mkvoodoo.css">
 </head>
 <body class="mkvoodoo-page">
-
-  <!-- Global HUD Overlay -->
-  <div class="global-hud-container">
-    <div class="hud-frame top-left"><span>A.01-FRAME</span><span class="sys-readout">SYS.UTL_03</span></div>
-    <div class="hud-frame top-right"><span id="user-coords">S 26.2041<br>E 28.0473</span><span class="sys-readout">LOC.HUB</span></div>
-    <div class="hud-frame bottom-left"><span>SECURE_LINK</span><span class="sys-readout">ACTIVE...</span></div>
-    <div class="hud-frame bottom-right"><span>100%_SYNC</span><span class="sys-readout">STABLE</span></div>
-  </div>
-
-
-
-  <nav>
-    <a href="index.html" class="nav-logo">
-      <img src="assets/Synontech/synontech_wordmark_white.svg" alt="synontech" class="nav-logo-img" style="height: 36px;">
-    </a>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html#products">Products</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="future.html">Future</a></li>
-      <li class="mobile-only"><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener">Support</a></li>
-      <li class="mobile-only"><a href="#" class="contact-link">Contact</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" class="nav-cta btn-secondary-tactical" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">Support</a>
-      <a href="#" class="nav-cta contact-link btn-primary-tactical" style="padding: 0.5rem 1.2rem; font-size: 0.8rem; --btn-bg: var(--color-violet);">Contact</a>
-    </div>
-
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-  </nav>
+  <header class="mkv-header">
+    <nav class="mkv-nav" aria-label="MKVoodoo navigation">
+      <a href="index.html" class="mkv-brand" aria-label="Back to Synontech">
+        <img src="assets/Synontech/synontech_wordmark_white.svg" alt="Synontech">
+      </a>
+      <ul class="mkv-nav-links" id="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#workflow">Workflow</a></li>
+        <li><a href="#release">Release</a></li>
+        <li><a href="index.html#products">All products</a></li>
+        <li class="mkv-mobile-download"><a href="#download">Download</a></li>
+      </ul>
+      <a class="mkv-nav-download" href="#download">Download v1.1.1</a>
+      <button class="mkv-nav-toggle" id="nav-hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </nav>
+  </header>
 
   <main>
-    <section id="mkv-hero">
-      <div class="mkv-hero-grid"></div>
-      <div class="mkv-hero-warmth"></div>
-
-      <div class="mkv-hero-inner">
+    <section class="mkv-hero">
+      <div class="mkv-shell mkv-hero-layout">
         <div class="mkv-hero-copy reveal">
-          <p class="mkv-eyebrow">Desktop Utility // Local Media Workbench</p>
-          <h1 class="mkv-hero-title">
-            <img src="assets/MKVoodoo%20logo%20-%20Final%20-%20Dark%20Background.png" alt="MKVoodoo Video Converter" class="mkv-hero-logo">
-          </h1>
-          <p class="mkv-lead">
-            Clean, convert, and queue your media locally. MKVoodoo turns messy video folders into tidy, mobile-ready files with smart naming, track control, and FFmpeg-powered batch processing.
-          </p>
-          <div class="mkv-ctas">
-            <a href="https://github.com/synontechsa-hub/MKVoodoo/releases" target="_blank" rel="noopener" class="mkv-btn-primary" id="mkv-download-btn">Download Latest</a>
-            <a href="https://github.com/synontechsa-hub/MKVoodoo" target="_blank" rel="noopener" class="mkv-btn-secondary">GitHub Repo</a>
+          <p class="mkv-eyebrow"><span></span>Windows desktop utility · v1.1.1</p>
+          <h1><img src="assets/MKVoodoo/MKVoodoo logo - Final - Dark Background.png" alt="MKVoodoo"></h1>
+          <p class="mkv-lead">The media workbench for people who want control. Download, clean, convert, rename, and queue video files on your own machine—with no cloud processing in the middle.</p>
+          <div class="mkv-actions">
+            <a class="mkv-button mkv-button-primary" id="mkv-download-btn" href="https://github.com/synontechsa-hub/MKVoodoo/releases/download/v1.1.1/MKVoodoo_v1.1.1_Setup.exe">Download for Windows <span aria-hidden="true">↓</span></a>
+            <a class="mkv-button mkv-button-secondary" href="https://github.com/synontechsa-hub/MKVoodoo" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
           </div>
-
-          <div class="mkv-release-info reveal reveal-delay-3" id="latest-release" style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: none;">
-            <p style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--color-violet); text-transform: uppercase; letter-spacing: 0.05em;">
-                Latest Release: <span id="mkv-version" style="color: #fff; margin-left: 0.5rem;"></span>
-            </p>
-            <div id="mkv-changelog" style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.75rem; max-width: 500px; line-height: 1.5; font-family: 'Inter', sans-serif;">
-                <!-- Changelog will be injected here -->
-            </div>
-          </div>
+          <p class="mkv-trust">Free download · Local processing · Powered by FFmpeg</p>
         </div>
 
-        <div class="mkv-console reveal reveal-delay-2" aria-label="MKVoodoo interface preview">
-          <div class="mkv-console-top">
-            <div class="mkv-window-controls">
-              <span></span><span></span><span></span>
-            </div>
-            <span class="mkv-console-title">Batch Session</span>
-            <span class="mkv-console-status">LOCAL</span>
-          </div>
-          <div class="mkv-console-body">
-            <aside class="mkv-console-rail">
-              <span class="active">Dashboard</span>
-              <span>New Job</span>
-              <span>Queue</span>
-              <span>Settings</span>
-            </aside>
-            <div class="mkv-console-main">
-              <div class="mkv-status-row">
-                <div>
-                  <span class="mkv-mini-label">Files discovered</span>
-                  <strong>34</strong>
-                </div>
-                <div>
-                  <span class="mkv-mini-label">Encoder</span>
-                  <strong>NVENC</strong>
-                </div>
-                <div>
-                  <span class="mkv-mini-label">Preset</span>
-                  <strong>720p Medium</strong>
-                </div>
+        <div class="mkv-app" aria-label="Stylised preview of the MKVoodoo desktop app">
+          <div class="app-titlebar"><div><i></i><i></i><i></i></div><span>MKVoodoo / Batch queue</span><b>Local</b></div>
+          <div class="app-body">
+            <aside><strong>MKV</strong><span class="active">Dashboard</span><span>Convert</span><span>Download</span><span>Queue</span><span>Settings</span></aside>
+            <div class="app-main">
+              <div class="app-overview"><div><small>In queue</small><strong>12</strong></div><div><small>Encoder</small><strong>NVENC</strong></div><div><small>Complete</small><strong>08</strong></div></div>
+              <div class="app-job">
+                <div class="app-job-head"><div><strong>Series.S02E05.mkv</strong><small>H.264 · 1080p · All audio tracks</small></div><b>64%</b></div>
+                <div class="app-progress"><span></span></div>
+                <div class="app-job-stats"><span>Speed <strong>3.2×</strong></span><span>Remaining <strong>04:18</strong></span><span>Output <strong>MKV</strong></span></div>
               </div>
-              <div class="mkv-job-card">
-                <div class="mkv-job-head">
-                  <span>S02E05 - The Fall.mkv</span>
-                  <em>64%</em>
-                </div>
-                <div class="mkv-progress"><span></span></div>
-                <p>Audio: all tracks preserved // Subtitles: copied // Output: Matroska</p>
-              </div>
-              <div class="mkv-check-list">
-                <span>Smart naming enabled</span>
-                <span>Output folder verified</span>
-                <span>Queue can resume failed jobs</span>
-              </div>
+              <div class="app-queue"><span><i class="done">✓</i> Episode 03</span><span><i class="done">✓</i> Episode 04</span><span><i>5</i> Episode 05</span></div>
             </div>
           </div>
         </div>
       </div>
+      <div class="mkv-shell mkv-capability-strip"><span>Batch conversion</span><span>YouTube download</span><span>Smart naming</span><span>Hardware encoding</span></div>
     </section>
 
-    <section id="mkv-workflow" class="mkv-band">
-      <div class="section-inner">
-        <p class="mkv-section-tag reveal">Workflow_01</p>
-        <h2 class="mkv-section-title reveal">From messy folder to clean queue</h2>
-        <div class="mkv-flow">
-          <article class="reveal">
-            <span>01</span>
-            <h3>Scan</h3>
-            <p>Drop files or select folders. MKVoodoo finds supported video files and prepares them for review.</p>
-          </article>
-          <article class="reveal reveal-delay-1">
-            <span>02</span>
-            <h3>Review</h3>
-            <p>Check smart season and episode naming before anything touches your output folder.</p>
-          </article>
-          <article class="reveal reveal-delay-2">
-            <span>03</span>
-            <h3>Tune</h3>
-            <p>Choose audio tracks, subtitle handling, bitrate, output destination, and conversion preset.</p>
-          </article>
-          <article class="reveal reveal-delay-3">
-            <span>04</span>
-            <h3>Queue</h3>
-            <p>Run the batch, monitor progress, retry failures, clear completed jobs, and keep moving.</p>
-          </article>
+    <section id="features" class="mkv-section mkv-features">
+      <div class="mkv-shell">
+        <div class="mkv-section-head reveal"><p class="mkv-eyebrow"><span></span>What it does</p><h2>A complete media cleanup workflow, in one place.</h2><p>MKVoodoo handles the repetitive work between finding a video and putting a clean, correctly named file into your library.</p></div>
+        <div class="mkv-feature-grid">
+          <article class="reveal"><span class="feature-number">01</span><h3>Convert in batches</h3><p>Queue whole folders, choose a preset, and let FFmpeg work through the list while you keep an eye on progress.</p></article>
+          <article class="reveal reveal-delay-1"><span class="feature-number">02</span><h3>Download from YouTube</h3><p>Bring supported videos into the same local workflow, with the downloader updated for the v1.1.1 release.</p></article>
+          <article class="reveal reveal-delay-2"><span class="feature-number">03</span><h3>Name files intelligently</h3><p>Review detected season and episode details before output, so a messy source becomes a tidy media library.</p></article>
+          <article class="reveal"><span class="feature-number">04</span><h3>Control every track</h3><p>Preserve all audio and subtitles, or select exactly which streams should travel into the final file.</p></article>
+          <article class="reveal reveal-delay-1"><span class="feature-number">05</span><h3>Use your hardware</h3><p>Take advantage of NVIDIA NVENC or Intel Quick Sync where available, with dependable CPU fallback.</p></article>
+          <article class="reveal reveal-delay-2"><span class="feature-number">06</span><h3>Recover the queue</h3><p>Retry failures, skip existing outputs, clear completed jobs, and get a long batch moving again without starting over.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="mkv-control" class="mkv-split-section">
-      <div class="section-inner mkv-split">
-        <div class="reveal">
-          <p class="mkv-section-tag">Control_02</p>
-          <h2 class="mkv-section-title">Built for local control</h2>
-          <p class="mkv-copy">
-            MKVoodoo is designed for people who want their media workflow to stay on their machine. No upload step, no account ritual, no cloud dependency. Your folders stay yours.
-          </p>
-        </div>
-        <div class="mkv-control-grid">
-          <article class="reveal">
-            <h3>Offline-first</h3>
-            <p>Conversions run locally through FFmpeg, with no remote processing path in the workflow.</p>
-          </article>
-          <article class="reveal reveal-delay-1">
-            <h3>Track-aware</h3>
-            <p>Preserve all audio and subtitle tracks, or pick exactly what each output file should carry.</p>
-          </article>
-          <article class="reveal reveal-delay-2">
-            <h3>Hardware-ready</h3>
-            <p>Detect NVIDIA NVENC and Intel Quick Sync where available, with CPU encoding as fallback.</p>
-          </article>
-          <article class="reveal reveal-delay-3">
-            <h3>Queue-safe</h3>
-            <p>Skip existing files, retry failures, reset failed jobs, and clean completed history.</p>
-          </article>
-        </div>
+    <section id="workflow" class="mkv-section mkv-workflow">
+      <div class="mkv-shell">
+        <div class="mkv-workflow-copy reveal"><p class="mkv-eyebrow"><span></span>A calmer workflow</p><h2>Four steps from source to sorted.</h2><p>Everything important stays visible before you start the queue, so you spend less time fixing surprises afterwards.</p></div>
+        <ol class="workflow-list">
+          <li class="reveal"><span>01</span><div><h3>Add</h3><p>Choose videos, drop in a folder, or paste a supported download link.</p></div></li>
+          <li class="reveal reveal-delay-1"><span>02</span><div><h3>Review</h3><p>Confirm names, tracks, source details, and the intended destination.</p></div></li>
+          <li class="reveal reveal-delay-2"><span>03</span><div><h3>Tune</h3><p>Select resolution, quality, encoder, and stream-handling preferences.</p></div></li>
+          <li class="reveal reveal-delay-3"><span>04</span><div><h3>Run</h3><p>Start the queue, watch progress, and retry individual jobs if needed.</p></div></li>
+        </ol>
       </div>
     </section>
 
-    <section id="mkv-specs" class="mkv-band">
-      <div class="section-inner">
-        <p class="mkv-section-tag reveal">Engine_03</p>
-        <h2 class="mkv-section-title reveal">Conversion engine</h2>
-        <div class="mkv-spec-table reveal reveal-delay-1">
-          <div><span>Stack</span><strong>Python backend + Flutter desktop UI</strong></div>
-          <div><span>Core engine</span><strong>FFmpeg process orchestration</strong></div>
-          <div><span>Inputs</span><strong>MKV, MP4, WebM</strong></div>
-          <div><span>Outputs</span><strong>MKV container, H.264 video, AAC or copied audio</strong></div>
-          <div><span>Presets</span><strong>1080p, 720p, and 480p in high, medium, and low profiles</strong></div>
-          <div><span>Hardware</span><strong>NVENC, Quick Sync, and CPU fallback</strong></div>
-        </div>
+    <section class="mkv-section mkv-local">
+      <div class="mkv-shell mkv-local-layout">
+        <div class="local-statement reveal"><p class="mkv-eyebrow"><span></span>Local by design</p><h2>Your media stays on your machine.</h2></div>
+        <div class="local-copy reveal reveal-delay-1"><p>Conversion is handled locally through FFmpeg. There is no upload step, no account requirement, and no remote conversion service between you and your files.</p><div class="local-points"><span><b>01</b>No cloud processing</span><span><b>02</b>No account ritual</span><span><b>03</b>No subscription</span></div></div>
       </div>
     </section>
 
-    <section id="mkv-bottom-cta">
-      <div class="section-inner reveal">
-        <p class="mkv-section-tag">Status_04</p>
-        <h2 class="mkv-section-title">Batch conversion with fewer rituals</h2>
-        <p class="mkv-copy">
-          MKVoodoo is a focused utility for preparing media libraries without handing them to someone else's server.
-        </p>
-        <div class="mkv-ctas reveal reveal-delay-1">
-          <a href="https://github.com/synontechsa-hub/MKVoodoo/releases" target="_blank" rel="noopener" class="mkv-btn-primary">Download Latest</a>
+    <section id="release" class="mkv-section mkv-release-section">
+      <div class="mkv-shell release-layout">
+        <div class="release-copy reveal">
+          <p class="mkv-eyebrow"><span></span>Current release</p>
+          <h2>MKVoodoo <span id="mkv-version">v1.1.1</span></h2>
+          <p>Built for Windows with a Flutter desktop interface, a Python processing layer, and FFmpeg at the core.</p>
+          <div class="release-specs"><span><small>Platform</small>Windows 10/11</span><span><small>Inputs</small>MKV, MP4, WebM</span><span><small>Output</small>MKV / H.264</span><span><small>Acceleration</small>NVENC, Quick Sync</span></div>
         </div>
+        <aside class="release-notes reveal reveal-delay-1" id="latest-release">
+          <div class="release-notes-head"><span>Latest release notes</span><a href="https://github.com/synontechsa-hub/MKVoodoo/releases/tag/v1.1.1" target="_blank" rel="noopener">Full release ↗</a></div>
+          <div id="mkv-changelog">Version 1.1.1 refreshes the YouTube download path and delivers the current signed-off Windows installer.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="download" class="mkv-download-section">
+      <div class="mkv-shell mkv-download-panel reveal">
+        <div><p class="mkv-eyebrow"><span></span>Ready when you are</p><h2>Put your media queue to work.</h2><p>Download the current Windows installer and start with a folder—or a link.</p></div>
+        <div class="download-actions"><a class="mkv-button mkv-button-light" href="https://github.com/synontechsa-hub/MKVoodoo/releases/download/v1.1.1/MKVoodoo_v1.1.1_Setup.exe">Download v1.1.1 <span aria-hidden="true">↓</span></a><small>Installer · Windows x64</small></div>
       </div>
     </section>
   </main>
 
   <footer class="mkv-footer">
-    <div class="footer-left">
-      <img src="assets/Synontech/Powered_by_dark_background.png" alt="powered by synontech" class="footer-badge">
-    </div>
-    <ul class="footer-links">
-      <li><a href="index.html">Main site</a></li>
-      <li><a href="index.html#products">Products</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="future.html">Future</a></li>
-      <li><a href="#" class="contact-link">Contact</a></li>
-    </ul>
-    <div class="footer-copy">
-      <span>&copy; <span id="current-year">2026</span> Synontech. All rights reserved.</span>
-    </div>
+    <div class="mkv-shell mkv-footer-grid"><div><img src="assets/Synontech/synontech_wordmark_white.svg" alt="Synontech"><p>MKVoodoo is built and maintained by Synontech.</p></div><div><a href="index.html">Synontech home</a><a href="index.html#products">All products</a><a href="https://github.com/synontechsa-hub/MKVoodoo" target="_blank" rel="noopener">GitHub</a><a href="#" class="contact-link">Contact</a></div></div>
+    <div class="mkv-shell mkv-footer-base"><span>© <span id="current-year">2026</span> Synontech. All rights reserved.</span><span>Local-first software from South Africa.</span></div>
   </footer>
 
   <script src="js/analytics.js" defer></script>
